@@ -2,6 +2,9 @@
   "name": "dev-summit-2019-customizing-widgets",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "postinstall": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jcfranco/dev-summit-2019-customizing-widgets.git"
@@ -12,5 +15,32 @@
   "homepage": "https://github.com/jcfranco/dev-summit-2019-customizing-widgets#readme",
   "dependencies": {
     "esri-reveal.js-templates": "git+https://github.com/esri/reveal.js.git"
+  },
+  "devDependencies": {
+    "@types/arcgis-js-api": "~4.8.0",
+    "dojo-typings": "^1.11.7",
+    "grunt": "^1.0.3",
+    "grunt-sass": "^2.0.0",
+    "prettier": "~1.13.7",
+    "typescript": "^2.9.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": "*.tsx",
+        "options": {
+          "printWidth": 100
+        }
+      }
+    ]
   }
 }
