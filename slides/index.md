@@ -41,7 +41,6 @@
 
 ---
 
-<!-- Presenter: Alan -->
 <h1 class="eight-bit">Level I</h1>
 
 ![Level 1](./img/8bit/JSAPI-8bit_Level-1.png)
@@ -89,39 +88,21 @@ We use
 
 ---
 
-<h3 style="font-family:monospace;text-transform:uppercase;">Previously on Theming</h3>
-<span style="font-family:monospace;text-transform:uppercase;">Life was hard.</span> <!-- .element: class="fragment" data-fragment-index="1" -->
+# Theming Steps
+
+1.  Get our theme utility. <!-- .element: class="fragment" data-fragment-index="1" -->
+1.  Use the utility. <!-- .element: class="fragment" data-fragment-index="2" -->
+1.  Customize your theme. <!-- .element: class="fragment" data-fragment-index="3" -->
+1.  Host your CSS file. <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
-Before, you needed to
+# Theming Setup
 
-1. Pull down the API <a href="https://github.com/Esri/arcgis-js-api/tree/4master">(arcgis-js-api)</a>.
-1. Create a theme directory in the right place.
-1. Create a Sass file.
-1. Import the core file.
-1. Run the compiler.
-1. Wonder if there were an easier way. <!-- .element: class="fragment" data-fragment-index="1" -->
-
----
-
-# There is an easier way!
-
-1. Get our theme utility. <!-- .element: class="fragment" data-fragment-index="1" -->
-1. Use the utility. <!-- .element: class="fragment" data-fragment-index="2" -->
-1. Customize your theme. <!-- .element: class="fragment" data-fragment-index="3" -->
-1. Host your CSS file. <!-- .element: class="fragment" data-fragment-index="4" -->
-
-<span style="visibility:hidden;">hidden</span>
-
----
-
-# There is an easier way!
-
-1. Clone the utility `jsapi-styles.git`
-1. Run `npm install`
-1. Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>.
-1. See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>.
+1.  Clone the utility `jsapi-styles.git`
+1.  Run `npm install`
+1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>.
+1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>.
 
 <span>You won't need the base stylesheet.</span><!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -312,42 +293,13 @@ API Exploration
 
 ---
 
-# Level II: `AttributionViewModel`
-
-```ts
-// AttributionViewModel in 4.7 Release
-
-interface AttributionViewModel {
-  items: Collection<AttributionItem>;
-  state: "ready" | "disabled";
-  view: MapView | SceneView;
-}
-
-interface AttributionItem {
-  layer: Layer;
-  text: string;
-}
-```
+# Level II: Extending a View
 
 ---
-
-# Views: Let's customize!
-
-Lets create a custom widget view.
 
 ---
 
 # Demo
-
-Create a custom Attribution Table view
-
-- [Demo Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/tree/master/demos/custom-attribution-start/steps/STEPS.md)
-- [Demo Complete](../demos/custom-attribution-complete/)
-- [Demo Start](../demos/custom-attribution-start/)
-
-[![Level 2 demo](./img/level2demo.png)](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custom-attribution-complete/)
-
-<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-2.png" data-background-size="cover" style="padding-left: 80px;" -->
 
 ---
 
@@ -382,7 +334,7 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 <!-- Presenter: JC -->
 
-# Level III: Extending a View
+# Level III: Recreating a View
 
 - Why? <!-- .element: class="fragment" data-fragment-index="1" -->
   - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -431,7 +383,7 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ---
 
-# Demo: Extending a View
+# Demo: Recreating
 
 [Demo](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custombasemapgallery-end/)
 |
@@ -443,7 +395,7 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ---
 
-# Level III: Extending a View Recap
+# Level III: Recreating a View Recap
 
 - Reusable <!-- .element: class="fragment" data-fragment-index="1" -->
   - View/ViewModel <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -476,8 +428,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 # Conclusion
 
 - Authored a theme <!-- .element: class="fragment" data-fragment-index="1" -->
-- Recreated a view <!-- .element: class="fragment" data-fragment-index="2" -->
-- Extended a view <!-- .element: class="fragment" data-fragment-index="3" -->
+- Extended a view <!-- .element: class="fragment" data-fragment-index="2" -->
+- Recreated a view <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -499,9 +451,9 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ##### For example
 
-> &#x1f914; Where can I find the slides/source?
+> 🤔 Where can I find the slides/source?
 
-&#x1F449; [esriurl.com/customwidgetsds2018](http://esriurl.com/customwidgetsds2018) &#x1F448;
+👉 [bit.ly/customwidgetsds19](http://bit.ly/customwidgetsds19) 👈
 
 ---
 
