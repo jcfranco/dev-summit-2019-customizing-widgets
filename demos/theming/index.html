@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Themes</title>
+
+    <!-- Chance the path to the theme you want to use -->
+    <link id="themeLink" rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/light/main.css" />
+    <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/your-theme-name/main.css"> -->
+
+    <style>
+      html,
+      body,
+      #sceneDiv {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <script src="https://js.arcgis.com/4.11"></script>
+    <script type="text/javascript">
+      var map, view, featureLayer, popup, features, dcFL, ripple, tabHandler;
+
+      require([
+        "esri/Map",
+        "esri/WebScene",
+        "esri/views/SceneView",
+        "esri/tasks/QueryTask",
+        "esri/tasks/support/Query",
+        "esri/layers/FeatureLayer",
+        "esri/layers/GraphicsLayer",
+        "esri/geometry/Extent",
+        "esri/PopupTemplate",
+        "esri/widgets/Compass",
+        "esri/widgets/Home",
+        "esri/widgets/BasemapGallery",
+        "esri/widgets/Search",
+        "esri/widgets/ColorPicker",
+        "esri/widgets/Expand",
+        "dojo/dom-construct",
+        "dojo/domReady!"
+      ], function(
+        Map,
+        WebScene,
+        SceneView,
+        QueryTask,
+        Query,
+        FeatureLayer,
+        GraphicsLayer,
+        Extent,
+        PopupTemplate,
+        Compass,
+        Home,
+        BasemapGallery,
+        Search,
+        ColorPicker,
+        Expand,
+        domConstruct
+      ) {
+        // Create the map
+        map = new WebScene({ portalItem: { id: "2b721b9e7bef45e2b7ff78a398a33acc" } });
+
+        // Create the SceneView
+        view = new SceneView({
+          container: "sceneDiv",
+          map: map
+        });
+
+        var themes = [
+          "light",
+          "dark",
+          "light-blue",
+          "dark-blue",
+          "light-green",
+          "dark-green",
+          "light-purple",
+          "dark-purple",
+          "light-red",
+          "dark-red"
+        ];
+        var selectMenuNode = document.createElement("select");
+        view.ui.add(selectMenuNode, "top-left");
+        selectMenuNode.onchange = function() {
+          var themeLinkNode = document.getElementById("themeLink");
+          themeLinkNode.href = "https://js.arcgis.com/4.11/esri/themes/" + selectMenuNode.value + "/main.css";
+        };
+        themes.forEach(function(theme) {
+          var optionNode = document.createElement("option");
+          optionNode.value = theme;
+          optionNode.textContent = theme;
+          selectMenuNode.appendChild(optionNode);
+        });
+
+        //////////////////////////////////////////
+        // Widgets
+
+        view.popup.dockOptions = {
+          position: "bottom-center"
+        };
+
+        var search = new Search({
+          viewModel: {
+            buttonModeEnabled: true,
+            view: view
+          }
+        });
+
+        var bmg = new BasemapGallery({
+          view: view
+        });
+
+        var bmg_expand = new Expand({
+          expandIconClass: "esri-icon-basemap",
+          expandTooltip: "Expand Basemap Gallery",
+          expanded: false,
+          view: view,
+          content: bmg
+        });
+
+        var home = new Home({
+          viewModel: {
+            view: view
+          }
+        });
+
+        var compass = new Compass({
+          viewModel: {
+            view: view
+          }
+        });
+
+        var colorPicker = new ColorPicker();
+
+        view.ui.add([search], "top-right");
+        view.ui.add([bmg_expand], "bottom-left");
+        view.ui.add([colorPicker], "bottom-right");
+
+        // Widgets
+        //////////////////////////////////////////
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="sceneDiv"></div>
+  </body>
+</html>

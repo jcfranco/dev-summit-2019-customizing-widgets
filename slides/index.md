@@ -115,7 +115,7 @@ Clone the repo.<br/>
 
 <div>
 ```
-git clone https://github.com/jcfranco/interactive-design.git
+git clone https://github.com/jcfranco/jsapi-styles.git
 ```
 </div><!-- .element: class="fragment" data-fragment-index="1" -->
 
