@@ -61,6 +61,20 @@
 
 ---
 
+# Esri Themes
+
+9 themes are provided out-of-the-box:
+
+Using a theme requires only a slight update to the CSS path.
+
+```html
+<link rel="stylesheet" href="https://jsdev.arcgis.com/4.11/esri/themes/<theme-name>/main.css">
+```
+
+[Theme Switcher](./demos/theming/)
+
+---
+
 # Theming Technology
 
 ---
