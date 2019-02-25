@@ -12,13 +12,7 @@ import { renderable, tsx } from "esri/widgets/support/widget";
 const CSS = {
   base: "custom-compass",
   disabled: "custom-compass--disabled",
-  image: "custom-compass__image",
-
-  // common
-  esriWidget: "esri-widget",
-  esriHeader: "esri-widget__header",
-  esriIconPlay: "esri-icon-play",
-  esriIconPause: "esri-icon-pause"
+  image: "custom-compass__image"
 };
 
 interface CustomCompassProperties {
@@ -44,12 +38,6 @@ class CustomCompass extends declared(Widget) {
   }
 
   postInitialize() {}
-
-  //--------------------------------------------------------------------------
-  //
-  //  Variables
-  //
-  //--------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------
   //
