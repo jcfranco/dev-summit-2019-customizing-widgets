@@ -389,8 +389,6 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 |
 [Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery-start/STEPS.md)
 
-<img src="img/demo-extending-view.png" width="50%"/>
-
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-2.png" data-background-size="cover" style="padding-left: 80px;"  -->
 
 ---
@@ -458,5 +456,3 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 ---
 
 <!-- data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-esri.png" data-background-size="cover" style="padding-left: 80px;" -->
-
-![Thank You](./img/thanks.gif)
