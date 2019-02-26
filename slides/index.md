@@ -39,6 +39,8 @@
 
 ![continue](./img/8bit/8-BIT-continue-1366.png)
 
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
 ---
 
 <h1 class="eight-bit">Level I</h1>
@@ -46,6 +48,8 @@
 ![Level 1](./img/8bit/JSAPI-8bit_Level-1.png)
 
 <h2 class="eight-bit">Theming</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
@@ -70,6 +74,10 @@ Using a theme requires only a slight update to the CSS path.
 ```html
 <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/<theme-name>/main.css">
 ```
+
+---
+
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
 [Theme Switcher](../demos/out-of-the-box-themes/)
 
@@ -243,7 +251,9 @@ todo: update theming guide
 
 ---
 
-# Let's have a look & make a theme!
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+
+Lets make a theme!
 
 ---
 
@@ -265,6 +275,8 @@ todo: update theming guide
 
 <h2 class="eight-bit">Ready?</h2>
 
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
 ---
 
 <!-- LEVEL UP B -->
@@ -273,6 +285,8 @@ todo: update theming guide
 ![Level 2](./img/8bit/JSAPI-8bit_Level-2.png)
 
 <h2 class="eight-bit">Views</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
@@ -313,7 +327,9 @@ todo: show final demo
 
 ---
 
-# Demo
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+
+Extending a view
 
 ---
 
@@ -335,6 +351,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 <h2 class="eight-bit">Ready?</h2>
 
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
 ---
 
 <!-- LEVEL UP B -->
@@ -343,6 +361,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 ![Level 3](./img/8bit/JSAPI-8bit_Level-3.png)
 
 <h2 class="eight-bit">Extending a View</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
