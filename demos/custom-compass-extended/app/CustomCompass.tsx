@@ -29,7 +29,7 @@ class CustomCompass extends declared(Compass) {
   render() {
     const { orientation, state } = this.viewModel;
 
-    const disabled = state === "disabled"; // todo: cracked glass?
+    const disabled = state === "disabled";
 
     const baseClasses = {
       [CSS.disabled]: disabled
