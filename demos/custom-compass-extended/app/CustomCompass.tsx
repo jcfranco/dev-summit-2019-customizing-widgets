@@ -12,12 +12,6 @@ const CSS = {
   image: "custom-compass__image"
 };
 
-interface Axes {
-  x?: number;
-  y?: number;
-  z?: number;
-}
-
 @subclass("esri.demo.CustomCompass")
 class CustomCompass extends declared(Compass) {
   //--------------------------------------------------------------------------
@@ -46,7 +40,9 @@ class CustomCompass extends declared(Compass) {
         class={CSS.image}
         src="app/img/compass-needle.png"
         alt="Compass Needle"
-        styles={this._toRotationTransform(orientation)}
+        styles={{
+          transform: `rotateZ(${orientation.z}deg)`
+        }}
       />
     );
 
@@ -61,12 +57,6 @@ class CustomCompass extends declared(Compass) {
         {compassImage}
       </button>
     );
-  }
-
-  private _toRotationTransform(orientation: Axes): HashMap<string> {
-    return {
-      transform: `rotateZ(${orientation.z}deg)`
-    };
   }
 }
 
