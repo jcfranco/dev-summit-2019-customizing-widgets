@@ -21,11 +21,11 @@
 
 - Theming <!-- .element: class="fragment" data-fragment-index="1" -->
   - Changing styles: colors, sizing, font, etc.
-- Extending <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Adding additional functionality
-- Altering presentation of a widget <!-- .element: class="fragment" data-fragment-index="3" -->
+- Altering presentation of a widget <!-- .element: class="fragment" data-fragment-index="2" -->
   - Customizing view
   - New view
+- Extending <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Adding additional functionality
 
 ---
 
@@ -302,8 +302,8 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 API Exploration
 
-- [Attribution Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attribution.html)
-- [Attribution Sample](https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist/index.html)
+- [Compass Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
+- [Compass Sample](https://developers.arcgis.com/javascript/latest/sample-code/widgets-compass-2d/index.html)
 
 ---
 
