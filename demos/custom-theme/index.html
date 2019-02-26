@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Custom theme preview</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .widget-things-image {
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+
+      .widget-things-image:hover {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+      }
+    </style>
+    <link rel="stylesheet" href="../dist/my-theme/main.css" />
+    <script src="https://js.arcgis.com/4.10/"></script>
+    <script>
+      require([
+        "esri/views/MapView",
+        "esri/WebMap",
+        "esri/widgets/Search",
+        "esri/widgets/Legend",
+        "esri/widgets/Compass",
+        "esri/widgets/Expand",
+        "esri/widgets/Home"
+      ], function(MapView, WebMap, Search, Legend, Compass, Expand, Home) {
+        var webmap = new WebMap({
+          portalItem: {
+            id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
+          }
+        });
+
+        var view = new MapView({
+          map: webmap,
+          container: "viewDiv"
+        });
+
+        var home = new Home({
+          view: view
+        });
+
+        view.ui.add(home, "top-left");
+
+        var compass = new Compass({
+          view: view
+        });
+
+        view.ui.add(compass, "top-left");
+
+        var search = new Search({
+          view: view
+        });
+
+        view.ui.add(search, "top-right");
+
+        var legend = new Legend({
+          view: view
+        });
+
+        var expand = new Expand({
+          view: view,
+          content: legend
+        });
+
+        view.ui.add(expand, "bottom-left");
+
+        view.when(function() {
+          search.search("Jackson, Georgia");
+        });
+
+        var images = ["widget-things.png", "upside-down.png"];
+
+        var img = document.createElement("img");
+        img.className = "widget-things-image";
+        img.src = "widget-things.png";
+        img["data-image-index"] = 0;
+
+        img.onclick = function() {
+          var nextIndex = !!img["data-image-index"] ? 0 : 1;
+          img.src = images[nextIndex];
+          img["data-image-index"] = nextIndex;
+        };
+
+        view.ui.add(img, "bottom-right");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>

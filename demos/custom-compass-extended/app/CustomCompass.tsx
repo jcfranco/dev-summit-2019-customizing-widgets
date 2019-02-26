@@ -50,7 +50,7 @@ class CustomCompass extends declared(Compass) {
       <button
         bind={this}
         class={this.classes(CSS.base, baseClasses)}
-        onclick={this.reset}
+        onclick={this.viewModel.reset}
         aria-label="Reset"
         title="Reset"
       >

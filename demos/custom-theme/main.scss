@@ -1,0 +1,46 @@
+/*
+  Theme: My Theme
+*/
+
+//  Main Colors Vars
+$font-color: #3a5fe5 !default;
+$background-color: #1e0707 !default;
+$interactive-font-color: #ff1515 !default;
+
+$heading-color: #ff1515 !default;
+
+$border-color: #333;
+
+// Active
+$border-color--active: #073e1e !default;
+$background-color--active: #1e193c !default;
+
+// Buttons
+$button-color: #ff1515 !default;
+
+// Font
+$font-title: "BenguiatITCW01-BoldCn";
+@font-face {
+  font-family: $font-title;
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot")
+      format("embedded-opentype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff")
+      format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+// Font
+$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial,
+  sans-serif !default;
+
+// Text
+$line-height: 1.3em !default;
+$base-font-size: 18px !default;
+
+$button-width: 42px !default;
+$button-height: 42px !default;
+
+@import "../base/core";

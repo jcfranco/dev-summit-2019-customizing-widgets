@@ -19,12 +19,6 @@ interface CustomCompassProperties {
   view: MapView;
 }
 
-interface Axes {
-  x?: number;
-  y?: number;
-  z?: number;
-}
-
 @subclass("esri.demo.CustomCompass")
 class CustomCompass extends declared(Widget) {
   //--------------------------------------------------------------------------
@@ -82,7 +76,9 @@ class CustomCompass extends declared(Widget) {
         class={CSS.image}
         src="app/img/compass-needle.png"
         alt="Compass Needle"
-        styles={this._toRotationTransform(orientation)}
+        styles={{
+          transform: `rotateZ(${orientation.z}deg)`
+        }}
       />
     );
 
@@ -90,35 +86,13 @@ class CustomCompass extends declared(Widget) {
       <button
         bind={this}
         class={this.classes(CSS.base, baseClasses)}
-        onclick={this._reset}
+        onclick={this.viewModel.reset}
         aria-label="Reset"
         title="Reset"
       >
         {compassImage}
       </button>
     );
-  }
-
-  //--------------------------------------------------------------------------
-  //
-  //  Protected Methods
-  //
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  //
-  //  Private Methods
-  //
-  //--------------------------------------------------------------------------
-
-  private _reset(): void {
-    this.viewModel.reset();
-  }
-
-  private _toRotationTransform(orientation: Axes): HashMap<string> {
-    return {
-      transform: `rotateZ(${orientation.z}deg)`
-    };
   }
 }
 
