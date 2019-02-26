@@ -10,26 +10,38 @@ import BasemapGalleryProperties = __esri.BasemapGalleryProperties;
 const CSS = {
   base: "custom-basemap-gallery",
 
-  scene: "custom-basemap-gallery__scene",
+  scene: "custom-basemap-gallery__dice-scene",
 
   dice: "custom-basemap-gallery__dice",
   diceFace: "custom-basemap-gallery__dice-face",
 
-  diceFaceTop: "custom-basemap-gallery__dice-face--top",
-  diceFaceBottom: "custom-basemap-gallery__dice-face--bottom",
-  diceFaceLeft: "custom-basemap-gallery__dice-face--left",
-  diceFaceRight: "custom-basemap-gallery__dice-face--right",
-  diceFaceFront: "custom-basemap-gallery__dice-face--front",
-  diceFaceBack: "custom-basemap-gallery__dice-face--back",
+  diceFace1: "custom-basemap-gallery__dice-face--1",
+  diceFace2: "custom-basemap-gallery__dice-face--2",
+  diceFace3: "custom-basemap-gallery__dice-face--3",
+  diceFace4: "custom-basemap-gallery__dice-face--4",
+  diceFace5: "custom-basemap-gallery__dice-face--5",
+  diceFace6: "custom-basemap-gallery__dice-face--6",
+  diceFace7: "custom-basemap-gallery__dice-face--7",
+  diceFace8: "custom-basemap-gallery__dice-face--8",
+  diceFace9: "custom-basemap-gallery__dice-face--9",
+  diceFace10: "custom-basemap-gallery__dice-face--10",
+  diceFace11: "custom-basemap-gallery__dice-face--11",
+  diceFace12: "custom-basemap-gallery__dice-face--12",
+
+  dice1Selected: "custom-basemap-gallery__dice--1-selected",
+  dice2Selected: "custom-basemap-gallery__dice--2-selected",
+  dice3Selected: "custom-basemap-gallery__dice--3-selected",
+  dice4Selected: "custom-basemap-gallery__dice--4-selected",
+  dice5Selected: "custom-basemap-gallery__dice--5-selected",
+  dice6Selected: "custom-basemap-gallery__dice--6-selected",
+  dice7Selected: "custom-basemap-gallery__dice--7-selected",
+  dice8Selected: "custom-basemap-gallery__dice--8-selected",
+  dice9Selected: "custom-basemap-gallery__dice--9-selected",
+  dice10Selected: "custom-basemap-gallery__dice--10-selected",
+  dice11Selected: "custom-basemap-gallery__dice--11-selected",
+  dice12Selected: "custom-basemap-gallery__dice--12-selected",
 
   diceRolling: "custom-basemap-gallery__dice--rolling",
-
-  diceTopSelected: "custom-basemap-gallery__dice--top-selected",
-  diceBottomSelected: "custom-basemap-gallery__dice--bottom-selected",
-  diceLeftSelected: "custom-basemap-gallery__dice--left-selected",
-  diceRightSelected: "custom-basemap-gallery__dice--right-selected",
-  diceFrontSelected: "custom-basemap-gallery__dice--front-selected",
-  diceBackSelected: "custom-basemap-gallery__dice--back-selected",
 
   // common
   widget: "esri-widget",
@@ -63,46 +75,11 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
 
   //--------------------------------------------------------------------------
   //
-  //  Private methods
+  //  Public Methods
   //
-  //-------------------------------------------------------------------
+  //--------------------------------------------------------------------------
 
-  render() {
-    return (
-      <div class={this.classes(CSS.base, CSS.widget)} onclick={this._handleClick} tabIndex={0}>
-        {this.renderDice()}
-      </div>
-    );
-  }
-
-  renderDice() {
-    const { viewModel: { items } } = this;
-    const item = items.find(item => item.basemap === this.activeBasemap);
-    const index = (items.indexOf(item) + 1) % 6;
-
-    const faceClass = index === 1 ? CSS.diceTopSelected :
-                      index === 2 ? CSS.diceBackSelected :
-                      index === 3 ? CSS.diceLeftSelected:
-                      index === 4 ? CSS.diceRightSelected:
-                      index === 5 ? CSS.diceBottomSelected:
-                      CSS.diceFrontSelected;
-
-    const rollingClass = this._rolling ? CSS.diceRolling : null;
-
-    return <div class={CSS.scene}>
-      <div class={this.classes(CSS.dice, faceClass, rollingClass)}>
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceFront)} />
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceTop)} />
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceBottom)} />
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceLeft)} />
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceRight)} />
-        <div class={this.classes(CSS.diceFace, CSS.diceFaceBack)} />
-      </div>
-    </div>;
-  }
-
-  @accessibleHandler()
-  private _handleClick() {
+  roll() {
     const { viewModel: { items } } = this;
 
     const nextItemIndex = random(0, items.length - 1);
@@ -117,6 +94,82 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
         this.scheduleRender();
       }, 750);
     }
+
+    this.scheduleRender();
+  }
+
+  //--------------------------------------------------------------------------
+  //
+  //  Public methods
+  //
+  //-------------------------------------------------------------------
+
+  render() {
+    return (
+      <div class={this.classes(CSS.base, CSS.widget)} onclick={this._handleClick}>
+        {this.renderDice()}
+      </div>
+    );
+  }
+
+  //--------------------------------------------------------------------------
+  //
+  //  Protected methods
+  //
+  //-------------------------------------------------------------------
+
+  protected renderDice() {
+    const { viewModel: { items } } = this;
+    const item = items.find(item => item.basemap === this.activeBasemap);
+    const index = items.indexOf(item);
+
+    const faceClass = index === 0 ? CSS.dice1Selected :
+                      index === 1 ? CSS.dice2Selected :
+                      index === 2 ? CSS.dice3Selected :
+                      index === 3 ? CSS.dice4Selected :
+                      index === 4 ? CSS.dice5Selected :
+                      index === 5 ? CSS.dice6Selected :
+                      index === 6 ? CSS.dice7Selected :
+                      index === 7 ? CSS.dice8Selected :
+                      index === 8 ? CSS.dice9Selected :
+                      index === 9 ? CSS.dice10Selected :
+                      index === 10 ? CSS.dice11Selected :
+                      CSS.dice12Selected;
+
+    const rollingClass = this._rolling ? CSS.diceRolling : null;
+
+    return <div class={CSS.scene}>
+      <div class={this.classes(CSS.dice, faceClass, rollingClass)}>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace3)}>{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace6)}>{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace5)}>{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace4)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace2)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace1)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace8)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace12)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace11)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace10)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace9)} >{this.renderPentagon()}</div>
+        <div class={this.classes(CSS.diceFace, CSS.diceFace7)} >{this.renderPentagon()}</div>
+      </div>
+    </div>;
+  }
+
+  protected renderPentagon() {
+    return (
+      <svg class="pentagon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 588 588">
+        <polygon
+          points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691"
+          fill="white" stroke="black" stroke-width="4" />
+      </svg>
+    );
+  }
+
+  @accessibleHandler()
+  protected _handleClick() {
+    this.roll();
   }
 }
 
