@@ -1,0 +1,125 @@
+.custom-basemap-gallery {
+  background: transparent;
+}
+
+.custom-basemap-gallery__scene {
+  perspective: 400px;
+}
+
+.custom-basemap-gallery__dice {
+  height: 50px;
+  width: 50px;
+  position: relative;
+
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.custom-basemap-gallery__dice-face {
+  border: 2px solid #07135e;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  font-size: 3em;
+  font-weight: bolder;
+  -webkit-text-fill-color: ghostwhite;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #07135e;
+  background: rgba(26, 45, 171, 0.75);
+  background-image: url("../images/scratched-texture-invert.png");
+  background-size: contain;
+}
+
+.custom-basemap-gallery__dice-face:before {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.custom-basemap-gallery__dice-face--top {
+  transform: rotateX(90deg) translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--top:before {
+  content: "5";
+}
+
+.custom-basemap-gallery__dice-face--bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--bottom:before {
+  content: "2";
+}
+
+.custom-basemap-gallery__dice-face--left {
+  transform: rotateY(-90deg) translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--left:before {
+  content: "3";
+}
+
+.custom-basemap-gallery__dice-face--right {
+  transform: rotateY(90deg) translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--right:before {
+  content: "4";
+}
+
+.custom-basemap-gallery__dice-face--front {
+  transform: translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--front:before {
+  content: "1";
+}
+
+.custom-basemap-gallery__dice-face--back {
+  transform: rotateX(180deg) translate3d(0, 0, 25px);
+}
+
+.custom-basemap-gallery__dice-face--back:before {
+  content: "6";
+}
+
+.custom-basemap-gallery__dice--rolling {
+  animation: rolling 750ms linear;
+}
+
+.custom-basemap-gallery__dice--top-selected {
+  transform: rotateX(-90deg);
+}
+
+.custom-basemap-gallery__dice--bottom-selected {
+  transform: rotateX(90deg);
+}
+
+.custom-basemap-gallery__dice--front-selected {}
+
+.custom-basemap-gallery__dice--back-selected {
+  transform: rotateX(180deg);
+}
+
+.custom-basemap-gallery__dice--left-selected {
+  transform: rotateY(90deg);
+}
+
+.custom-basemap-gallery__dice--right-selected {
+  transform: rotateY(-90deg);
+}
+
+@keyframes rolling {
+  0% {
+    transform: rotateX(0) rotateY(0) scale3d(1, 1, 1);
+  }
+  40% {
+    transform: rotateX(360deg) rotateY(180deg) scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg) scale3d(1, 1, 1);
+  }
+}

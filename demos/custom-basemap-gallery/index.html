@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Extending Widget View</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+  <link rel="stylesheet" href="app/css/CustomBasemapGallery.css">
+
+  <style>
+    html,
+    body,
+    #view {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+  </style>
+
+  <script type="text/javascript">
+    var href = location.href;
+    var demoLocation = href.slice(0, href.lastIndexOf("/"));
+    var dojoConfig = {
+      // configure loader to load demo modules (non-CDN) from the correct location.
+      packages: [{
+        name: "demo",
+        location: demoLocation + '/app'
+      }]
+    };
+  </script>
+
+  <script src="https://js.arcgis.com/4.11"></script>
+  <script>
+    var map, view, widget;
+
+    require([
+      "esri/WebScene",
+      "esri/views/SceneView",
+      "demo/CustomBasemapGallery",
+      "dojo/domReady!"
+    ], function (
+      Scene,
+      SceneView,
+      CustomBasemapGallery
+    ) {
+
+      //----------------
+      //  map setup
+      //----------------
+
+      map = new Scene({
+        portalItem: {
+          id: "2b721b9e7bef45e2b7ff78a398a33acc"
+        }
+      });
+
+      view = new SceneView({
+        container: "view",
+        map: map,
+        center: [-116.538433, 33.824775],
+        zoom: 13
+      });
+
+      //----------------
+      //  widget setup
+      //----------------
+
+      widget = new CustomBasemapGallery({
+        view: view
+      });
+
+      view.ui.add(widget, "bottom-right");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+</html>
