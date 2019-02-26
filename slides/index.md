@@ -32,8 +32,8 @@
 # Customization Approaches
 
 - Authoring a theme <!-- .element: class="fragment" data-fragment-index="1" -->
-- Extending a view <!-- .element: class="fragment" data-fragment-index="2" -->
-- Recreating a view <!-- .element: class="fragment" data-fragment-index="3" -->
+- Recreating a view <!-- .element: class="fragment" data-fragment-index="2" -->
+- Extending a view <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -68,10 +68,10 @@
 Using a theme requires only a slight update to the CSS path.
 
 ```html
-<link rel="stylesheet" href="https://jsdev.arcgis.com/4.11/esri/themes/<theme-name>/main.css">
+<link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/<theme-name>/main.css">
 ```
 
-[Theme Switcher](./demos/theming/)
+[Theme Switcher](../demos/out-of-the-box-themes/)
 
 ---
 
@@ -173,10 +173,6 @@ Link your stylesheet in your app.
 
 ---
 
-# Let's have a look!
-
----
-
 # Theme Smart
 
 Avoid adding additional CSS selectors.<br/>
@@ -199,14 +195,14 @@ Instead, use Sass to your advantage.<br/>
 
 ```
 // Inside base/_colorVariables.scss
-$background_color : #fff !default ;
+$background-color : #fff !default ;
 ```
 
 Any value assignment overrides the `!default` value.
 
 ```
 // Inside sass/my-theme/main.scss
-$background_color : #cc4b09;
+$background-color : #1e0707;
 ```
 
 But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -218,10 +214,10 @@ But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" 
 Override the four main color variables...
 
 ```
-$text_color            : #fff;    // white
-$background_color      : #cc4b09; // mario
-$anchor_color          : #ffbaaa; // luigi
-$button_text_color     : #ffbaaa; // luigi
+$font-color             : #3a5fe5;
+$background-color       : #1e0707
+$interactive-font-color : #ff1515;
+$button-color           : #ff1515;
 ```
 
 <span>...then magic!</span><!-- .element: class="fragment" data-fragment-index="1" -->
@@ -235,17 +231,19 @@ $button_text_color     : #ffbaaa; // luigi
 <img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/>
 
 ```
-  $button_text_hover_color: offset-foreground-color($button_text_color, 25%) !default;
-  $anchor_hover_color: offset-foreground-color($anchor_color, 25%) !default;
-  $background_hover_color: offset-background-color($background_color, 5%) !default;
+$interactive-font-color--hover: offset-foreground-color($interactive-font-color, 25%) !default;
+$background-color--hover: offset-background-color($background-color, 6%) !default;
+$border-color--hover: offset-foreground-color($interactive-font-color, 50%) !default;
 // etc.
 ```
 
 <a href="https://developers.arcgis.com/javascript/latest/guide/styling/index.html#sassy-widgets" target="_blank">Theming Guide</a>
 
+todo: update theming guide
+
 ---
 
-# So let's make a theme!
+# Let's have a look & make a theme!
 
 ---
 
@@ -311,6 +309,8 @@ API Exploration
 
 ---
 
+todo: show final demo
+
 ---
 
 # Demo
@@ -354,9 +354,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
   - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
   - Same ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
 - How? <!-- .element: class="fragment" data-fragment-index="4" -->
-  - JS API v4.7 <!-- .element: class="fragment" data-fragment-index="5" -->
   - <!-- .element: class="fragment" data-fragment-index="5" --> `esri/widgets/Widget`
-  - TypeScript <!-- .element: class="fragment" data-fragment-index="5" -->
+  - TypeScript <!-- .element: class="fragment" data-fragment-index="6" -->
 
 ---
 
@@ -469,4 +468,4 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ---
 
-<!-- data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-esri.png" data-background-size="cover" style="padding-left: 80px;" -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-esri.png" data-background-size="cover" style="padding-left: 80px;" -->
