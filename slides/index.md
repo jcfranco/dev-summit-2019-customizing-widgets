@@ -7,6 +7,8 @@
 
 ### JC Franco – [@arfncode](https://twitter.com/arfncode)
 
+![hi](https://media.giphy.com/media/l1J9QMBuKJr9Axeik/200w_d.gif)
+
 ---
 
 # Agenda
@@ -14,6 +16,8 @@
 - What can be customized
 - Customization approaches with demos
 - Q & A
+
+![widget things](img/widget-things.png)
 
 ---
 
@@ -445,6 +449,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 <h2 class="eight-bit">Ready?</h2>
 
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
 ---
 
 <!-- LEVEL UP B -->
@@ -453,6 +459,8 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 ![Level 4](./img/8bit/JSAPI-8bit_Level-4-ani.gif)
 
 <h2 class="eight-bit">Put it all together.</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
