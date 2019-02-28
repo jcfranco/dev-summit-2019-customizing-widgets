@@ -35,13 +35,13 @@
     var map, view, widget;
 
     require([
-      "esri/WebScene",
-      "esri/views/SceneView",
+      "esri/WebMap",
+      "esri/views/MapView",
       "demo/CustomBasemapGallery",
       "dojo/domReady!"
     ], function (
-      Scene,
-      SceneView,
+      WebMap,
+      MapView,
       CustomBasemapGallery
     ) {
 
@@ -49,13 +49,13 @@
       //  map setup
       //----------------
 
-      map = new Scene({
+      map = new WebMap({
         portalItem: {
-          id: "2b721b9e7bef45e2b7ff78a398a33acc"
+          id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
         }
       });
 
-      view = new SceneView({
+      view = new MapView({
         container: "view",
         map: map,
         center: [-116.538433, 33.824775],
