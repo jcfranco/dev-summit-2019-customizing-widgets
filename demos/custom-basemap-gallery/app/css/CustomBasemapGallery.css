@@ -33,7 +33,7 @@
   font-weight: bolder;
   -webkit-text-fill-color: ghostwhite;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #07135e;
+  -webkit-text-stroke-color: rgba(7, 19, 94, 0.95);
   backface-visibility: hidden;
 }
 
@@ -51,8 +51,8 @@
 
 .pentagon polygon {
   stroke-width: 20px;
-  stroke: #07135e;
-  fill: rgba(26, 45, 171, 0.95);
+  stroke: #4159ff;
+  fill: rgba(38, 65, 247, 0.95);
 }
 
 /* dice faces */
