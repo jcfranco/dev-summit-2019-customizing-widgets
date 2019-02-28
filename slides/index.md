@@ -132,7 +132,7 @@ We use
 1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>.
 1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>.
 
-<span>You won't need the base stylesheet.</span><!-- .element: class="fragment" data-fragment-index="1" -->
+You won't need the base stylesheet<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -141,11 +141,11 @@ We use
 Clone the repo.<br/>
 <a href="https://github.com/jcfranco/jsapi-styles" target="_blank">https://github.com/jcfranco/jsapi-styles</a>
 
-<div>
 ```
 git clone https://github.com/jcfranco/jsapi-styles.git
 ```
-</div><!-- .element: class="fragment" data-fragment-index="1" -->
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -153,12 +153,12 @@ git clone https://github.com/jcfranco/jsapi-styles.git
 
 `npm install`
 
-<div>
-  - Installs the necessary bits.
-  - Creates a sample theme directory.
-  - Compiles the CSS from the SCSS.
-  - Spins up a preview in your default browser.
-</div><!-- .element: class="fragment" data-fragment-index="1" -->
+- Installs the necessary bits.
+- Creates a sample theme directory.
+- Compiles the CSS from the SCSS.
+- Spins up a preview in your default browser.
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -189,9 +189,10 @@ Link your stylesheet in your app.
 
 # Theme Smart
 
-Avoid adding additional CSS selectors.<br/>
-Instead, use Sass to your advantage.<br/>
-<span>Let's look at how the core theme is structured.</span><!-- .element: class="fragment" data-fragment-index="1" -->
+- Avoid adding additional CSS selectors
+- Instead, use Sass to your advantage
+
+Let's look at how the core theme is structured<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -237,7 +238,7 @@ $interactive-font-color--inverse  : #1e0707;
 $background-color--inverse        : #3a5fe5;
 ```
 
-<span>...then magic!</span><!-- .element: class="fragment" data-fragment-index="1" -->
+...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
 
 <img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/><!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -387,16 +388,18 @@ Custom Stranger Things Compass
 
 Recreating a view
 
+[Demo Start](../demos/custom-compass-start/) | [Demo Steps](../demos/custom-compass-start/STEPS.md)
+
 ---
 
 # Level II: Views Recap
 
-What have we learned about Widget Views? <!-- .element: class="fragment" data-fragment-index="0" -->
+What have we learned about Widget Views?
 
-- Face of the widget <!-- .element: class="fragment" data-fragment-index="2" -->
-- Present ViewModel logic <!-- .element: class="fragment" data-fragment-index="3" -->
-- ViewModel separation allows framework integration or custom views <!-- .element: class="fragment" data-fragment-index="4" -->
-- Downloadable on API docs <!-- .element: class="fragment" data-fragment-index="5" -->
+- Face of the widget <!-- .element: class="fragment" data-fragment-index="1" -->
+- Present ViewModel logic <!-- .element: class="fragment" data-fragment-index="2" -->
+- ViewModel separation allows framework integration or custom views <!-- .element: class="fragment" data-fragment-index="3" -->
+- Downloadable on API docs <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
