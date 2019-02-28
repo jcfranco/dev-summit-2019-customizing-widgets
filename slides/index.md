@@ -223,7 +223,7 @@ But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" 
 
 # Theme Structure
 
-Override the main color variables...
+Override the core color variables...
 
 ```
 $font-color                       : #3a5fe5;
