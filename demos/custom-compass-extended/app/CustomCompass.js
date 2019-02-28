@@ -28,14 +28,14 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
     };
     var CustomCompass = /** @class */ (function (_super) {
         __extends(CustomCompass, _super);
-        function CustomCompass() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
         //--------------------------------------------------------------------------
         //
         //  Lifecycle
         //
         //--------------------------------------------------------------------------
+        function CustomCompass(props) {
+            return _super.call(this) || this;
+        }
         //--------------------------------------------------------------------------
         //
         //  Public Methods
@@ -51,7 +51,7 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
             var compassImage = disabled ? null : (widget_1.tsx("img", { class: CSS.image, src: "app/img/compass-needle.png", alt: "Compass Needle", styles: {
                     transform: "rotateZ(" + orientation.z + "deg)"
                 } }));
-            return (widget_1.tsx("button", { bind: this, class: this.classes(CSS.base, baseClasses), onclick: this.viewModel.reset, "aria-label": "Reset", title: "Reset" }, compassImage));
+            return (widget_1.tsx("button", { bind: this, class: this.classes(CSS.base, baseClasses), onclick: this.reset, "aria-label": "Reset", title: "Reset" }, compassImage));
         };
         CustomCompass = __decorate([
             decorators_1.subclass("esri.demo.CustomCompass")
