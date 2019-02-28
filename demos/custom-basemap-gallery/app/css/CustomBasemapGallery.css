@@ -59,7 +59,7 @@
 /* dice faces */
 
 .custom-basemap-gallery__dice-face--1 {
-  transform: rotateY(142deg)  rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateY(142deg) rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--1:before {
@@ -75,7 +75,7 @@
 }
 
 .custom-basemap-gallery__dice-face--3 {
-  transform:  rotateX(23.313deg)  rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--3:before {
@@ -108,7 +108,7 @@
 }
 
 .custom-basemap-gallery__dice-face--7 {
-  transform: rotateY(106deg)  rotateX(-23.313deg) rotateZ(0deg)translate3d(0, 0, 36px);
+  transform: rotateY(106deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--7:before {
@@ -116,7 +116,7 @@
 }
 
 .custom-basemap-gallery__dice-face--8 {
-  transform: rotateY(36deg)  rotateX(-23.313deg) rotateZ(0deg)translate3d(0, 0, 36px);
+  transform: rotateY(36deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--8:before {
@@ -124,7 +124,7 @@
 }
 
 .custom-basemap-gallery__dice-face--9 {
-  transform: rotateY(-36deg) rotateX(-23.313deg) rotateZ(0deg)translate3d(0, 0, 36px);
+  transform: rotateY(-36deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--9:before {
@@ -139,7 +139,7 @@
 }
 
 .custom-basemap-gallery__dice-face--11 {
-  transform: rotateY(180deg) rotateX(-23.313deg) rotateZ(0deg)translate3d(0, 0, 36px);
+  transform: rotateY(180deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
 }
 
 .custom-basemap-gallery__dice-face--11:before {

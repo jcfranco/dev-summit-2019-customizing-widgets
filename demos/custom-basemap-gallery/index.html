@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Extending Widget View</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css" />
+    <link rel="stylesheet" href="app/css/CustomBasemapGallery.css" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-  <title>Extending Widget View</title>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
-  <link rel="stylesheet" href="app/css/CustomBasemapGallery.css">
+    <style>
+      html,
+      body,
+      #view {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+    </style>
 
-  <style>
-    html,
-    body,
-    #view {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-    }
-  </style>
+    <script type="text/javascript">
+      var href = location.href;
+      var demoLocation = href.slice(0, href.lastIndexOf("/"));
+      var dojoConfig = {
+        // configure loader to load demo modules (non-CDN) from the correct location.
+        packages: [
+          {
+            name: "demo",
+            location: demoLocation + "/app"
+          }
+        ]
+      };
+    </script>
 
-  <script type="text/javascript">
-    var href = location.href;
-    var demoLocation = href.slice(0, href.lastIndexOf("/"));
-    var dojoConfig = {
-      // configure loader to load demo modules (non-CDN) from the correct location.
-      packages: [{
-        name: "demo",
-        location: demoLocation + '/app'
-      }]
-    };
-  </script>
+    <script src="https://js.arcgis.com/4.11"></script>
+    <script>
+      var map, view, widget;
 
-  <script src="https://js.arcgis.com/4.11"></script>
-  <script>
-    var map, view, widget;
+      require(["esri/WebMap", "esri/views/MapView", "demo/CustomBasemapGallery", "dojo/domReady!"], function(
+        WebMap,
+        MapView,
+        CustomBasemapGallery
+      ) {
+        //----------------
+        //  map setup
+        //----------------
 
-    require([
-      "esri/WebMap",
-      "esri/views/MapView",
-      "demo/CustomBasemapGallery",
-      "dojo/domReady!"
-    ], function (
-      WebMap,
-      MapView,
-      CustomBasemapGallery
-    ) {
+        map = new WebMap({
+          portalItem: {
+            id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
+          }
+        });
 
-      //----------------
-      //  map setup
-      //----------------
+        view = new MapView({
+          container: "view",
+          map: map,
+          center: [-116.538433, 33.824775],
+          zoom: 13,
+          ui: {
+            components: ["attribution"]
+          }
+        });
 
-      map = new WebMap({
-        portalItem: {
-          id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
-        }
+        //----------------
+        //  widget setup
+        //----------------
+
+        widget = new CustomBasemapGallery({
+          view: view
+        });
+
+        view.ui.add(widget, "top-left");
       });
+    </script>
+  </head>
 
-      view = new MapView({
-        container: "view",
-        map: map,
-        center: [-116.538433, 33.824775],
-        zoom: 13,
-        ui: {
-          components: ["attribution"]
-        }
-      });
-
-      //----------------
-      //  widget setup
-      //----------------
-
-      widget = new CustomBasemapGallery({
-        view: view
-      });
-
-      view.ui.add(widget, "top-left");
-    });
-  </script>
-</head>
-
-<body>
-  <div id="view"></div>
-</body>
-
+  <body>
+    <div id="view"></div>
+  </body>
 </html>

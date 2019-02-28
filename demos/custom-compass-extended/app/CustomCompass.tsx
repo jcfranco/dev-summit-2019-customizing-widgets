@@ -62,7 +62,6 @@ class CustomCompass extends declared(Compass) {
       </button>
     );
   }
-
 }
 
 export = CustomCompass;

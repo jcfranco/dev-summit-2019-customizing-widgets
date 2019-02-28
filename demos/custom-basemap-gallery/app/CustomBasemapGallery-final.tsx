@@ -48,7 +48,6 @@ const CSS = {
 
 @subclass("demo.CustomBasemapGallery")
 class CustomBasemapGallery extends declared(BasemapGallery) {
-
   //--------------------------------------------------------------------------
   //
   //  Lifecycle
@@ -62,25 +61,27 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
     this._handleClick = this._handleClick.bind(this);
   }
 
-//--------------------------------------------------------------------------
-//
-//  Variables
-//
-//--------------------------------------------------------------------------
+  //--------------------------------------------------------------------------
+  //
+  //  Variables
+  //
+  //--------------------------------------------------------------------------
 
   private _rolling: boolean;
 
-//--------------------------------------------------------------------------
-//
-//  Public Methods
-//
-//--------------------------------------------------------------------------
+  //--------------------------------------------------------------------------
+  //
+  //  Public Methods
+  //
+  //--------------------------------------------------------------------------
 
   roll() {
-    const { viewModel: { items } } = this;
+    const {
+      viewModel: { items }
+    } = this;
 
     // get random basemap
-    const randomItemIndex = Math.floor(Math.random() * (items.length));
+    const randomItemIndex = Math.floor(Math.random() * items.length);
     const nextItem = items.getItemAt(randomItemIndex);
 
     if (!this._rolling) {
@@ -106,57 +107,75 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
     );
   }
 
-//--------------------------------------------------------------------------
-//
-//  Protected methods
-//
-//-------------------------------------------------------------------
+  //--------------------------------------------------------------------------
+  //
+  //  Protected methods
+  //
+  //-------------------------------------------------------------------
 
   protected renderDice() {
-    const { viewModel: { items } } = this;
-    const item = items.find(item => item.basemap === this.activeBasemap);
+    const {
+      viewModel: { items }
+    } = this;
+    const item = items.find((item) => item.basemap === this.activeBasemap);
     const index = items.indexOf(item);
 
-    const faceClass = index === 0 ? CSS.dice1Selected :
-                      index === 1 ? CSS.dice2Selected :
-                      index === 2 ? CSS.dice3Selected :
-                      index === 3 ? CSS.dice4Selected :
-                      index === 4 ? CSS.dice5Selected :
-                      index === 5 ? CSS.dice6Selected :
-                      index === 6 ? CSS.dice7Selected :
-                      index === 7 ? CSS.dice8Selected :
-                      index === 8 ? CSS.dice9Selected :
-                      index === 9 ? CSS.dice10Selected :
-                      index === 10 ? CSS.dice11Selected :
-                      CSS.dice12Selected;
+    const faceClass =
+      index === 0
+        ? CSS.dice1Selected
+        : index === 1
+        ? CSS.dice2Selected
+        : index === 2
+        ? CSS.dice3Selected
+        : index === 3
+        ? CSS.dice4Selected
+        : index === 4
+        ? CSS.dice5Selected
+        : index === 5
+        ? CSS.dice6Selected
+        : index === 6
+        ? CSS.dice7Selected
+        : index === 7
+        ? CSS.dice8Selected
+        : index === 8
+        ? CSS.dice9Selected
+        : index === 9
+        ? CSS.dice10Selected
+        : index === 10
+        ? CSS.dice11Selected
+        : CSS.dice12Selected;
 
     const rollingClass = this._rolling ? CSS.diceRolling : null;
 
-    return <div class={CSS.scene}>
-      <div class={this.classes(CSS.dice, faceClass, rollingClass)}>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace3)}>{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace6)}>{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace5)}>{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace4)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace2)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace1)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace8)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace12)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace11)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace10)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace9)} >{this.renderPentagon()}</div>
-        <div class={this.classes(CSS.diceFace, CSS.diceFace7)} >{this.renderPentagon()}</div>
+    return (
+      <div class={CSS.scene}>
+        <div class={this.classes(CSS.dice, faceClass, rollingClass)}>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace3)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace6)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace5)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace4)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace2)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace1)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace8)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace12)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace11)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace10)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace9)}>{this.renderPentagon()}</div>
+          <div class={this.classes(CSS.diceFace, CSS.diceFace7)}>{this.renderPentagon()}</div>
+        </div>
       </div>
-    </div>;
+    );
   }
 
   protected renderPentagon() {
     return (
-      <svg class="pentagon" version="1.1" xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 588 588">
+      <svg class="pentagon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588 588">
         <polygon
           points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691"
-          fill="white" stroke="black" stroke-width="4" />
+          fill="white"
+          stroke="black"
+          stroke-width="4"
+        />
       </svg>
     );
   }

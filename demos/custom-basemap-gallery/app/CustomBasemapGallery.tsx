@@ -17,7 +17,6 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
   constructor(params?: __esri.BasemapGalleryProperties) {
     super();
   }
-
 }
 
 export = CustomBasemapGallery;
