@@ -1,6 +1,6 @@
 Theming Steps
 
-## Styles architecture
+## Styles directory structure
 
 - `/jsapi-styles/`
   - `/dist/`: The compiled theme and assets. Copy this for your app.
@@ -9,6 +9,15 @@ Theming Steps
     - `/base/`: Here is where all the core defaults and styles are defined for colors, font, widgets, etc.
     - `/examples/`: Here are the `out-of-the-box` themes you can use to modify or create your own.
     - `/my-theme/`: This is the directory setup for you to start editing your theme
+
+## Explore directory structure
+
+View the following files:
+
+- `/sass/my-theme/main.scss`
+- `/sass/base/_color.scss`
+- `/sass/base/_type_.scss`
+- ...etc
 
 ## Update our preview app
 
@@ -43,8 +52,9 @@ Copy the following to `/jsapi-styles/preview/index.html`.
         "esri/widgets/Legend",
         "esri/widgets/Compass",
         "esri/widgets/Expand",
-        "esri/widgets/Home"
-      ], function(MapView, WebMap, Search, Legend, Compass, Expand, Home) {
+        "esri/widgets/Home",
+        "esri/widgets/LayerList"
+      ], function(MapView, WebMap, Search, Legend, Compass, Expand, Home, LayerList) {
         var webmap = new WebMap({
           portalItem: {
             id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
@@ -78,12 +88,25 @@ Copy the following to `/jsapi-styles/preview/index.html`.
           view: view
         });
 
-        var expand = new Expand({
+        var legendExpand = new Expand({
+          group: "top-left",
           view: view,
           content: legend
         });
 
-        view.ui.add(expand, "bottom-left");
+        view.ui.add(legendExpand, "top-left");
+
+        var layerList = new LayerList({
+          view: view
+        });
+
+        var layerListExpand = new Expand({
+          group: "top-left",
+          view: view,
+          content: layerList
+        });
+
+        view.ui.add(layerListExpand, "top-left");
 
         view.when(function() {
           search.search("Jackson, Georgia");
@@ -97,6 +120,10 @@ Copy the following to `/jsapi-styles/preview/index.html`.
   </body>
 </html>
 ```
+
+## Reload Preview Page
+
+Reload preview page to see more widgets.
 
 ## Lets start editing our theme
 
@@ -112,36 +139,22 @@ Replace the code with the following
 */
 
 $font-color: #3a5fe5;
-$interactive-font-color: #ff1515;
-$background-color: #1e0707;
-$button-color: #ff1515;
+// $interactive-font-color: #ff1515;
+// $background-color: #1e0707;
+// $button-color: #ff1515;
 
 @import "../base/core";
 ```
 
-## Borders
+## Uncomment the following to see changes
 
 ```scss
-$border-color: #333;
+$interactive-font-color: #ff1515;
+$background-color: #1e0707;
+$button-color: #ff1515;
 ```
 
-## Active states
-
-```scss
-// Active
-$border-color--active: #073e1e !default;
-$background-color--active: #1e193c !default;
-```
-
-## Inverse states
-
-```scss
-// inverse
-$interactive-font-color--inverse: #1e0707;
-$background-color--inverse: #3a5fe5;
-```
-
-## Font
+## Change Font
 
 ```scss
 // Font
@@ -159,14 +172,14 @@ $font-title: "BenguiatITCW01-BoldCn";
 $font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 ```
 
-## Font sizing
+## Change Font sizing
 
 ```scss
 $line-height: 1.3em !default;
 $base-font-size: 18px !default;
 ```
 
-## Button Sizes
+## Modify Button Sizes
 
 ```scss
 $button-width: 42px !default;
