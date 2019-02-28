@@ -223,13 +223,16 @@ But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" 
 
 # Theme Structure
 
-Override the four main color variables...
+Override the main color variables...
 
 ```
-$font-color             : #3a5fe5;
-$background-color       : #1e0707
-$interactive-font-color : #ff1515;
-$button-color           : #ff1515;
+$font-color                       : #3a5fe5;
+$background-color                 : #1e0707
+$interactive-font-color           : #ff1515;
+$button-color                     : #ff1515;
+
+$interactive-font-color--inverse  : #1e0707;
+$background-color--inverse        : #3a5fe5;
 ```
 
 <span>...then magic!</span><!-- .element: class="fragment" data-fragment-index="1" -->
@@ -255,9 +258,15 @@ todo: update theming guide
 
 ---
 
+# Level I: Lets make a theme
+
+[![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
+
+---
+
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
-Lets make a theme!
+Custom Theme
 
 ---
 
@@ -323,17 +332,15 @@ API Exploration
 
 ---
 
-# Level II: Extending a View
+# Level II: Recreating a view
 
----
-
-todo: show final demo
+[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass/)
 
 ---
 
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
-Extending a view
+Recreating a view
 
 ---
 

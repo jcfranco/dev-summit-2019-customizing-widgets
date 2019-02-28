@@ -15,6 +15,10 @@ $border-color: #333;
 $border-color--active: #073e1e !default;
 $background-color--active: #1e193c !default;
 
+// inverse
+$interactive-font-color--inverse: #1e0707;
+$background-color--inverse: #3a5fe5;
+
 // Buttons
 $button-color: #ff1515 !default;
 
@@ -24,17 +28,14 @@ $font-title: "BenguiatITCW01-BoldCn";
   font-family: $font-title;
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot")
       format("embedded-opentype"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff")
-      format("woff"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf")
-      format("truetype");
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff") format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 
 // Font
-$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial,
-  sans-serif !default;
+$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 // Text
 $line-height: 1.3em !default;
