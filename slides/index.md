@@ -195,7 +195,7 @@ Instead, use Sass to your advantage.<br/>
 
 # Theme Structure
 
-- Color <span>: `colorVariables.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
+- Color <span>: `color.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
 - Size <span>: `sizes.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
 - Type <span>: `type.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -207,7 +207,7 @@ Instead, use Sass to your advantage.<br/>
 
 ```
 // Inside base/_colorVariables.scss
-$background-color : #fff !default ;
+$background-color : #fff !default;
 ```
 
 Any value assignment overrides the `!default` value.
@@ -259,6 +259,8 @@ todo: update theming guide
 ---
 
 # Level I: Lets make a theme
+
+Stranger Things Theme
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
 
@@ -333,6 +335,8 @@ API Exploration
 ---
 
 # Level II: Recreating a view
+
+Custom Stranger Things Compass
 
 [![Custom Theme](./img/custom-compass.png)](../demos/custom-compass/)
 
