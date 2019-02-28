@@ -83,7 +83,9 @@ Using a theme requires only a slight update to the CSS path.
 
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
-[Theme Switcher](../demos/out-of-the-box-themes/)
+**Theme Switcher**
+
+[Out-of-the-box Themes](../demos/out-of-the-box-themes/)
 
 ---
 
@@ -252,9 +254,7 @@ $border-color--hover: offset-foreground-color($interactive-font-color, 50%) !def
 // etc.
 ```
 
-<a href="https://developers.arcgis.com/javascript/latest/guide/styling/index.html#sassy-widgets" target="_blank">Theming Guide</a>
-
-todo: update theming guide
+[Theming Guide](http://localhost:3000/latest/guide/styling/index.html)
 
 ---
 
@@ -268,7 +268,9 @@ Stranger Things Theme
 
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
-Custom Theme
+**Custom Theme**
+
+[Demo Steps](../demos/custom-theme/STEPS.md) | [Preview](http://localhost/git/jsapi-styles/preview/)
 
 ---
 
