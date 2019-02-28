@@ -1,54 +1,20 @@
-Steps
+Theming Steps
 
-```scss
-/*
-  Theme: My Theme
-*/
+## Styles architecture
 
-// //  Main Colors Vars
-// $font-color: #3a5fe5 !default;
-// $background-color: #1e0707 !default;
-// $interactive-font-color: #ff1515 !default;
+- `/jsapi-styles/`
+  - `/dist/`: The compiled theme and assets. Copy this for your app.
+  - `/preview/`: The preview application used for building a theme.
+  - `/sass/`: The code! Here is where the magic and work happens.
+    - `/base/`: Here is where all the core defaults and styles are defined for colors, font, widgets, etc.
+    - `/examples/`: Here are the `out-of-the-box` themes you can use to modify or create your own.
+    - `/my-theme/`: This is the directory setup for you to start editing your theme
 
-// $heading-color: #ff1515 !default;
+## Update our preview app
 
-// $border-color: #333;
+Lets update our preview app to show more widgets.
 
-// // Active
-// $border-color--active: #073e1e !default;
-// $background-color--active: #1e193c !default;
-
-// // inverse
-// $interactive-font-color--inverse: #1e0707;
-// $background-color--inverse: #3a5fe5;
-
-// // Buttons
-// $button-color: #ff1515 !default;
-
-// // Font
-// $font-title: "BenguiatITCW01-BoldCn";
-// @font-face {
-//   font-family: $font-title;
-//   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot")
-//       format("embedded-opentype"),
-//     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff") format("woff"),
-//     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf") format("truetype");
-//   font-style: normal;
-//   font-weight: bold;
-// }
-
-// // Font
-// $font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
-// // Text
-// $line-height: 1.3em !default;
-// $base-font-size: 18px !default;
-
-// $button-width: 42px !default;
-// $button-height: 42px !default;
-
-@import "../base/core";
-```
+Copy the following to `/jsapi-styles/preview/index.html`.
 
 ```html
 <!DOCTYPE html>
@@ -131,3 +97,82 @@ Steps
   </body>
 </html>
 ```
+
+## Lets start editing our theme
+
+Open `/jsapi-styles/sass/my-theme/main.scss`.
+
+## Lets update our theme code
+
+Replace the code with the following
+
+```scss
+/*
+  Theme: My Theme
+*/
+
+$font-color: #3a5fe5;
+$interactive-font-color: #ff1515;
+$background-color: #1e0707;
+$button-color: #ff1515;
+
+@import "../base/core";
+```
+
+## Borders
+
+```scss
+$border-color: #333;
+```
+
+## Active states
+
+```scss
+// Active
+$border-color--active: #073e1e !default;
+$background-color--active: #1e193c !default;
+```
+
+## Inverse states
+
+```scss
+// inverse
+$interactive-font-color--inverse: #1e0707;
+$background-color--inverse: #3a5fe5;
+```
+
+## Font
+
+```scss
+// Font
+$font-title: "BenguiatITCW01-BoldCn";
+@font-face {
+  font-family: $font-title;
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot") format("embedded-opentype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff") format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+// Font
+$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+```
+
+## Font sizing
+
+```scss
+$line-height: 1.3em !default;
+$base-font-size: 18px !default;
+```
+
+## Button Sizes
+
+```scss
+$button-width: 42px !default;
+$button-height: 42px !default;
+```
+
+## fin
+
+Our theme is complete!
