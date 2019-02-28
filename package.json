@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "tsc"
+    "postinstall": "tsc",
+    "prettify": "prettier --write \"demos/**/*.{css,html,ts,tsx}\""
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
     "dojo-typings": "^1.11.7",
     "grunt": "^1.0.3",
     "grunt-sass": "^2.0.0",
-    "prettier": "~1.13.7",
+    "prettier": "1.16.4",
     "typescript": "^2.9.2"
   },
   "prettier": {
