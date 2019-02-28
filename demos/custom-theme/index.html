@@ -18,11 +18,6 @@
         border: 1px solid #000;
         cursor: pointer;
       }
-
-      .widget-things-image:hover {
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
-      }
     </style>
     <link rel="stylesheet" href="../dist/my-theme/main.css" />
     <script src="https://js.arcgis.com/4.11/"></script>
@@ -80,10 +75,7 @@
           search.search("Jackson, Georgia");
         });
 
-        var images = [
-          "//localhost/git/dev-summit-2019-customizing-widgets/demos/custom-theme/widget-things.png",
-          "//localhost/git/dev-summit-2019-customizing-widgets/demos/custom-theme/upside-down.png"
-        ];
+        var images = ["widget-things.png", "upside-down.png"];
 
         var img = document.createElement("img");
         img.className = "widget-things-image";

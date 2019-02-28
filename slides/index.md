@@ -85,7 +85,7 @@ Using a theme requires only a slight update to the CSS path.
 
 **Theme Switcher**
 
-[Out-of-the-box Themes](../demos/out-of-the-box-themes/)
+[Out-of-the-box themes](../demos/out-of-the-box-themes/) | [API Styling Guide](http://localhost:3000/latest/guide/styling/index.html)
 
 ---
 
@@ -180,7 +180,7 @@ Host your stylesheet and any relevant assets.
 
 Link your stylesheet in your app.
 
-```
+```html
 <!-- In your app: -->
 <link href="path/to/your/theme/main.css" rel="stylesheet">
 ```
@@ -207,16 +207,16 @@ Instead, use Sass to your advantage.<br/>
 
 ### Default
 
-```
+```scss
 // Inside base/_colorVariables.scss
-$background-color : #fff !default;
+$background-color: #fff !default;
 ```
 
 Any value assignment overrides the `!default` value.
 
-```
+```scss
 // Inside sass/my-theme/main.scss
-$background-color : #1e0707;
+$background-color: #1e0707;
 ```
 
 But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -227,7 +227,7 @@ But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" 
 
 Override the core color variables...
 
-```
+```scss
 $font-color                       : #3a5fe5;
 $background-color                 : #1e0707
 $interactive-font-color           : #ff1515;
@@ -247,14 +247,14 @@ $background-color--inverse        : #3a5fe5;
 
 <img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/>
 
-```
+```scss
 $interactive-font-color--hover: offset-foreground-color($interactive-font-color, 25%) !default;
 $background-color--hover: offset-background-color($background-color, 6%) !default;
 $border-color--hover: offset-foreground-color($interactive-font-color, 50%) !default;
 // etc.
 ```
 
-[Theming Guide](http://localhost:3000/latest/guide/styling/index.html)
+[API Styling Guide](http://localhost:3000/latest/guide/styling/index.html)
 
 ---
 
@@ -311,9 +311,22 @@ Stranger Things Theme
 
 Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-fragment-index="0" -->
 
-- Reusable <!-- .element: class="fragment" data-fragment-index="1" -->
-- UI replacement <!-- .element: class="fragment" data-fragment-index="2" -->
-- Framework integration <!-- .element: class="fragment" data-fragment-index="3" -->
+- Seperate logic from presentation <!-- .element: class="fragment" data-fragment-index="1" -->
+- Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
+- UI replacement <!-- .element: class="fragment" data-fragment-index="3" -->
+- Framework integration <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
+# Level II: TypeScript
+
+- Widgets written in TypeScript (Typed JavaScript) <!-- .element: class="fragment" data-fragment-index="1" -->
+- JS of the future, now <!-- .element: class="fragment" data-fragment-index="2" -->
+- IDE support <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Visual Studio <!-- .element: class="fragment" data-fragment-index="3" -->
+  - WebStorm <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Sublime <!-- .element: class="fragment" data-fragment-index="3" -->
+  - and more! <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -322,6 +335,34 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 - Presentation of the Widget <!-- .element: class="fragment" data-fragment-index="1" -->
 - Uses ViewModel APIs to render the UI <!-- .element: class="fragment" data-fragment-index="2" -->
 - View-specific logic resides here <!-- .element: class="fragment" data-fragment-index="3" -->
+- Extends <!-- .element: class="fragment" data-fragment-index="5" --> `esri/widgets/Widget`
+
+---
+
+# Level II: Widget Class
+
+`esri/widgets/Widget`
+
+- Provides lifecycle <!-- .element: class="fragment" data-fragment-index="1" -->
+- API consistency <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+# Level II: Widget Lifecycle
+
+- <!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
+- <!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
+- <!-- .element: class="fragment" data-fragment-index="3" --> `render`
+- <!-- .element: class="fragment" data-fragment-index="4" --> `destroy`
+
+---
+
+# Level II: `render`
+
+- Defines UI <!-- .element: class="fragment" data-fragment-index="1" -->
+- Reacts to state <!-- .element: class="fragment" data-fragment-index="2" -->
+- Uses JSX <!-- .element: class="fragment" data-fragment-index="3" -->
+- VDOM <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -331,54 +372,6 @@ API Exploration
 
 - [Compass Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
 - [Compass Sample](https://developers.arcgis.com/javascript/latest/sample-code/widgets-compass-2d/index.html)
-
----
-
-# Level III: Recreating a View
-
-- Why? <!-- .element: class="fragment" data-fragment-index="1" -->
-  - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Same ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
-- How? <!-- .element: class="fragment" data-fragment-index="4" -->
-  - <!-- .element: class="fragment" data-fragment-index="5" --> `esri/widgets/Widget`
-  - TypeScript <!-- .element: class="fragment" data-fragment-index="6" -->
-
----
-
-`esri/widgets/Widget`
-
-- Provides lifecycle <!-- .element: class="fragment" data-fragment-index="1" -->
-- API consistency <!-- .element: class="fragment" data-fragment-index="2" -->
-
----
-
-# Lifecycle
-
-- <!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
-- <!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
-- <!-- .element: class="fragment" data-fragment-index="3" --> `render`
-- <!-- .element: class="fragment" data-fragment-index="4" --> `destroy`
-
----
-
-# `render`
-
-- Defines UI <!-- .element: class="fragment" data-fragment-index="1" -->
-- Reacts to state <!-- .element: class="fragment" data-fragment-index="2" -->
-- Uses JSX <!-- .element: class="fragment" data-fragment-index="3" -->
-- VDOM <!-- .element: class="fragment" data-fragment-index="4" -->
-
----
-
-# TypeScript
-
-- Typed JavaScript <!-- .element: class="fragment" data-fragment-index="1" -->
-- JS of the future, now <!-- .element: class="fragment" data-fragment-index="2" -->
-- IDE support <!-- .element: class="fragment" data-fragment-index="3" -->
-  - Visual Studio <!-- .element: class="fragment" data-fragment-index="3" -->
-  - WebStorm <!-- .element: class="fragment" data-fragment-index="3" -->
-  - Sublime <!-- .element: class="fragment" data-fragment-index="3" -->
-  - and more! <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -428,6 +421,10 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 <h2 class="eight-bit">Extending a View</h2>
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
+---
+
+# Level III: Extending
 
 ---
 
