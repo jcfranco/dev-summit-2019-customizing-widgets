@@ -86,7 +86,7 @@ class CustomCompass extends declared(Widget) {
       <button
         bind={this}
         class={this.classes(CSS.base, baseClasses)}
-        onclick={this.viewModel.reset}
+        onclick={this.reset}
         aria-label="Reset"
         title="Reset"
       >
