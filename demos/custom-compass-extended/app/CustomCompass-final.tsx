@@ -16,16 +16,6 @@ const CSS = {
 class CustomCompass extends declared(Compass) {
   //--------------------------------------------------------------------------
   //
-  //  Lifecycle
-  //
-  //--------------------------------------------------------------------------
-
-  constructor(props: __esri.CompassProperties) {
-    super();
-  }
-
-  //--------------------------------------------------------------------------
-  //
   //  Public Methods
   //
   //--------------------------------------------------------------------------
@@ -54,7 +44,7 @@ class CustomCompass extends declared(Compass) {
       <button
         bind={this}
         class={this.classes(CSS.base, baseClasses)}
-        onclick={this.reset}
+        onclick={this.viewModel.reset}
         aria-label="Reset"
         title="Reset"
       >
@@ -62,7 +52,6 @@ class CustomCompass extends declared(Compass) {
       </button>
     );
   }
-
 }
 
 export = CustomCompass;

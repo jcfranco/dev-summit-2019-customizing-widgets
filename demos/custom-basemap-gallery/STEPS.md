@@ -1,4 +1,4 @@
-# Extending View Demo: Steps
+# Extending View Demo (pt 2): Steps
 
 **Note**: Steps assume development environment has been previously set up.
 
