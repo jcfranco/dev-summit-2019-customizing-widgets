@@ -20,6 +20,8 @@
   width: 50px;
   position: relative;
 
+  font-size: 2.3em;
+
   transform-style: preserve-3d;
   cursor: pointer;
   transform: rotateX(45deg);
@@ -29,7 +31,6 @@
   position: absolute;
   height: inherit;
   width: inherit;
-  font-size: 2.3em;
   font-weight: bolder;
   -webkit-text-fill-color: ghostwhite;
   -webkit-text-stroke-width: 1px;

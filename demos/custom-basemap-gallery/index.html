@@ -59,7 +59,10 @@
         container: "view",
         map: map,
         center: [-116.538433, 33.824775],
-        zoom: 13
+        zoom: 13,
+        ui: {
+          components: ["attribution"]
+        }
       });
 
       //----------------
@@ -70,7 +73,7 @@
         view: view
       });
 
-      view.ui.add(widget, "bottom-right");
+      view.ui.add(widget, "top-left");
     });
   </script>
 </head>
