@@ -1,9 +1,12 @@
 /// <amd-dependency path="esri/core/tsSupport/declareExtendsHelper" name="__extends" />
 /// <amd-dependency path="esri/core/tsSupport/decorateHelper" name="__decorate" />
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -21,12 +24,7 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
     var CSS = {
         base: "custom-compass",
         disabled: "custom-compass--disabled",
-        image: "custom-compass__image",
-        // common
-        esriWidget: "esri-widget",
-        esriHeader: "esri-widget__header",
-        esriIconPlay: "esri-icon-play",
-        esriIconPause: "esri-icon-pause"
+        image: "custom-compass__image"
     };
     var CustomCompass = /** @class */ (function (_super) {
         __extends(CustomCompass, _super);
@@ -37,11 +35,6 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
         //--------------------------------------------------------------------------
         function CustomCompass(props) {
             var _this = _super.call(this) || this;
-            //--------------------------------------------------------------------------
-            //
-            //  Variables
-            //
-            //--------------------------------------------------------------------------
             //--------------------------------------------------------------------------
             //
             //  Properties
@@ -67,30 +60,14 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
         CustomCompass.prototype.render = function () {
             var _a;
             var _b = this.viewModel, orientation = _b.orientation, state = _b.state;
-            var disabled = state === "disabled"; // todo: cracked glass?
+            var disabled = state === "disabled";
             var baseClasses = (_a = {},
                 _a[CSS.disabled] = disabled,
                 _a);
-            var compassImage = disabled ? null : (widget_1.tsx("img", { class: CSS.image, src: "app/img/compass-needle.png", alt: "Compass Needle", styles: this._toRotationTransform(orientation) }));
-            return (widget_1.tsx("button", { bind: this, class: this.classes(CSS.base, baseClasses), onclick: this._reset, "aria-label": "Reset", title: "Reset" }, compassImage));
-        };
-        //--------------------------------------------------------------------------
-        //
-        //  Protected Methods
-        //
-        //--------------------------------------------------------------------------
-        //--------------------------------------------------------------------------
-        //
-        //  Private Methods
-        //
-        //--------------------------------------------------------------------------
-        CustomCompass.prototype._reset = function () {
-            this.viewModel.reset();
-        };
-        CustomCompass.prototype._toRotationTransform = function (orientation) {
-            return {
-                transform: "rotateZ(" + orientation.z + "deg)"
-            };
+            var compassImage = disabled ? null : (widget_1.tsx("img", { class: CSS.image, src: "app/img/compass-needle.png", alt: "Compass Needle", styles: {
+                    transform: "rotateZ(" + orientation.z + "deg)"
+                } }));
+            return (widget_1.tsx("button", { bind: this, class: this.classes(CSS.base, baseClasses), onclick: this.viewModel.reset, "aria-label": "Reset", title: "Reset" }, compassImage));
         };
         __decorate([
             decorators_1.aliasOf("viewModel.view")
