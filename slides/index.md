@@ -386,7 +386,7 @@ API Exploration
 
 Custom Stranger Things Compass
 
-[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass/)
+[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass-complete/)
 
 ---
 

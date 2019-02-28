@@ -1,37 +1,45 @@
 /// <amd-dependency path="esri/core/tsSupport/declareExtendsHelper" name="__extends" />
 /// <amd-dependency path="esri/core/tsSupport/decorateHelper" name="__decorate" />
 
-import MapView = require("esri/views/MapView");
+// esri.core.accessorSupport
+import { aliasOf, declared, property, subclass } from "esri/core/accessorSupport/decorators";
+
+// esri.views
+import View = require("esri/views/View");
+
+// esri.widgets
 import Widget = require("esri/widgets/Widget");
 
+// esri.widgets.Compass
 import CompassViewModel = require("esri/widgets/Compass/CompassViewModel");
 
-import { aliasOf, declared, property, subclass } from "esri/core/accessorSupport/decorators";
+// esri.widgets.support
 import { renderable, tsx } from "esri/widgets/support/widget";
 
 const CSS = {
-  base: "custom-compass",
-  disabled: "custom-compass--disabled",
-  image: "custom-compass__image"
+  base: "esri-compass esri-widget--button esri-widget",
+  text: "esri-icon-font-fallback-text",
+  icon: "esri-compass__icon",
+  rotationIcon: "esri-icon-dial",
+  northIcon: "esri-icon-compass",
+  widgetIcon: "esri-icon-locate-circled",
+
+  // common
+  interactive: "esri-interactive",
+  disabled: "esri-disabled"
 };
 
-interface CustomCompassProperties {
-  view: MapView;
-}
-
-@subclass("esri.demo.CustomCompass")
-class CustomCompass extends declared(Widget) {
+@subclass("esri.widgets.Compass")
+class Compass extends declared(Widget) {
   //--------------------------------------------------------------------------
   //
   //  Lifecycle
   //
   //--------------------------------------------------------------------------
 
-  constructor(props: CustomCompassProperties) {
+  constructor(params?: any) {
     super();
   }
-
-  postInitialize() {}
 
   //--------------------------------------------------------------------------
   //
@@ -43,13 +51,15 @@ class CustomCompass extends declared(Widget) {
   //  view
   //----------------------------------
 
-  @aliasOf("viewModel.view") view: MapView = null;
+  @aliasOf("viewModel.view") view: View = null;
 
   //----------------------------------
   //  viewModel
   //----------------------------------
 
-  @property()
+  @property({
+    type: CompassViewModel
+  })
   @renderable(["viewModel.orientation", "viewModel.state"])
   viewModel: CompassViewModel = new CompassViewModel();
 
@@ -62,38 +72,13 @@ class CustomCompass extends declared(Widget) {
   @aliasOf("viewModel.reset")
   reset(): void {}
 
-  render() {
-    const { orientation, state } = this.viewModel;
-
-    const disabled = state === "disabled";
-
-    const baseClasses = {
-      [CSS.disabled]: disabled
-    };
-
-    const compassImage = disabled ? null : (
-      <img
-        class={CSS.image}
-        src="app/img/compass-needle.png"
-        alt="Compass Needle"
-        styles={{
-          transform: `rotateZ(${orientation.z}deg)`
-        }}
-      />
-    );
-
+  render(): any {
     return (
-      <button
-        bind={this}
-        class={this.classes(CSS.base, baseClasses)}
-        onclick={this.reset}
-        aria-label="Reset"
-        title="Reset"
-      >
-        {compassImage}
+      <button bind={this} onclick={this.reset} aria-label="Reset" title="Reset">
+        My Compass
       </button>
     );
   }
 }
 
-export = CustomCompass;
+export = Compass;

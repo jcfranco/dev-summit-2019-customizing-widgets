@@ -1,0 +1,21 @@
+.custom-compass {
+  width: 159px;
+  height: 200px;
+  background: url(../img/compass.png) no-repeat center center;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-compass--disabled {
+  background-image: url(../img/compass-disabled.png);
+}
+
+.custom-compass.esri-component {
+  box-shadow: none;
+}
+
+.custom-compass__image {
+  position: absolute;
+  top: 67px;
+  left: 68px;
+}
