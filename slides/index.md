@@ -307,8 +307,6 @@ Stranger Things Theme
 
 ---
 
-<!-- Presenter: Matt -->
-
 # Level II: Widget Composition
 
 Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -335,55 +333,6 @@ API Exploration
 - [Compass Sample](https://developers.arcgis.com/javascript/latest/sample-code/widgets-compass-2d/index.html)
 
 ---
-
-# Level II: Recreating a view
-
-Custom Stranger Things Compass
-
-[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass/)
-
----
-
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
-
-Recreating a view
-
----
-
-# Level II: Views Recap
-
-What have we learned about Widget Views? <!-- .element: class="fragment" data-fragment-index="0" -->
-
-- Face of the widget <!-- .element: class="fragment" data-fragment-index="2" -->
-- Present ViewModel logic <!-- .element: class="fragment" data-fragment-index="3" -->
-- ViewModel separation allows framework integration or custom views <!-- .element: class="fragment" data-fragment-index="4" -->
-- Downloadable on API docs <!-- .element: class="fragment" data-fragment-index="5" -->
-
----
-
-<!-- LEVEL UP A -->
-<h1 class="eight-bit">LEVEL UP!</h1>
-
-![Level 2](./img/8bit/JSAPI-8bit_Level-2.png)
-
-<h2 class="eight-bit">Ready?</h2>
-
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
-
----
-
-<!-- LEVEL UP B -->
-<h1 class="eight-bit">LEVEL III</h1>
-
-![Level 3](./img/8bit/JSAPI-8bit_Level-3.png)
-
-<h2 class="eight-bit">Extending a View</h2>
-
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
-
----
-
-<!-- Presenter: JC -->
 
 # Level III: Recreating a View
 
@@ -433,7 +382,56 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ---
 
-# Demo: Recreating
+# Level II: Recreating a view
+
+Custom Stranger Things Compass
+
+[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass/)
+
+---
+
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+
+Recreating a view
+
+---
+
+# Level II: Views Recap
+
+What have we learned about Widget Views? <!-- .element: class="fragment" data-fragment-index="0" -->
+
+- Face of the widget <!-- .element: class="fragment" data-fragment-index="2" -->
+- Present ViewModel logic <!-- .element: class="fragment" data-fragment-index="3" -->
+- ViewModel separation allows framework integration or custom views <!-- .element: class="fragment" data-fragment-index="4" -->
+- Downloadable on API docs <!-- .element: class="fragment" data-fragment-index="5" -->
+
+---
+
+<!-- LEVEL UP A -->
+<h1 class="eight-bit">LEVEL UP!</h1>
+
+![Level 2](./img/8bit/JSAPI-8bit_Level-2.png)
+
+<h2 class="eight-bit">Ready?</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
+---
+
+<!-- Presenter: JC -->
+
+<!-- LEVEL UP B -->
+<h1 class="eight-bit">LEVEL III</h1>
+
+![Level 3](./img/8bit/JSAPI-8bit_Level-3.png)
+
+<h2 class="eight-bit">Extending a View</h2>
+
+<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+
+---
+
+# Demo: Extending
 
 [Demo](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custombasemapgallery-end/)
 |
@@ -443,7 +441,7 @@ What have we learned about Widget Views? <!-- .element: class="fragment" data-fr
 
 ---
 
-# Level III: Recreating a View Recap
+# Level III: Extending a View Recap
 
 - Reusable <!-- .element: class="fragment" data-fragment-index="1" -->
   - View/ViewModel <!-- .element: class="fragment" data-fragment-index="1" -->
