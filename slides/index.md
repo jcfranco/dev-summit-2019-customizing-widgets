@@ -13,11 +13,13 @@
 
 # Agenda
 
+![widget things](img/widget-things.png)
+
+---
+
 - What can be customized
 - Customization approaches with demos
 - Q & A
-
-![widget things](img/widget-things.png)
 
 ---
 
@@ -71,7 +73,7 @@
 
 # Esri Themes
 
-9 themes are provided out-of-the-box:
+10 themes are provided out-of-the-box:
 
 Using a theme requires only a slight update to the CSS path.
 
