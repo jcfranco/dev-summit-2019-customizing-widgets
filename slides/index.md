@@ -1,5 +1,5 @@
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;" -->
-<!-- Presenter: Matt -->
+<!-- Presenter: JC Franco -->
 
 # ArcGIS API for JavaScript: Customizing Widgets
 
@@ -49,17 +49,17 @@
 
 ---
 
-<h1 class="eight-bit">Level I</h1>
+<h1>Act I</h1>
 
-![Level 1](./img/8bit/JSAPI-8bit_Level-1.png)
+![Act 1](./img/8bit/JSAPI-8bit_Level-1.png)
 
-<h2 class="eight-bit">Theming</h2>
+<h2>Theming</h2>
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
-# Level I: Theming
+# ActI: Theming
 
 ## Why Theme? <!-- .element: class="fragment" data-fragment-index="0" -->
 
@@ -261,7 +261,7 @@ $border-color--hover: offset-foreground-color($interactive-font-color, 50%) !def
 
 ---
 
-# Level I: Lets make a theme
+# ActI: Lets make a theme
 
 Stranger Things Theme
 
@@ -277,7 +277,7 @@ Stranger Things Theme
 
 ---
 
-# Level I: Theming Recap
+# ActI: Theming Recap
 
 - Use the utility for easy theming. <!-- .element: class="fragment" data-fragment-index="1" -->
 - Theme structure <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -288,29 +288,27 @@ Stranger Things Theme
 
 ---
 
-<!-- LEVEL UP A -->
-<h1 class="eight-bit">LEVEL UP!</h1>
+<!-- NEXT ACT  A -->
+<h1>End Act I</h1>
 
-![Level 1](./img/8bit/JSAPI-8bit_Level-1.png)
-
-<h2 class="eight-bit">Ready?</h2>
+![Act 1](./img/8bit/JSAPI-8bit_Level-1.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
-<!-- LEVEL UP B -->
-<h1 class="eight-bit">LEVEL II</h1>
+<!-- NEXT ACT  B -->
+<h1>Act II</h1>
 
-![Level 2](./img/8bit/JSAPI-8bit_Level-2.png)
+![Act 2](./img/8bit/JSAPI-8bit_Level-2.png)
 
-<h2 class="eight-bit">Views</h2>
+<h2>Views</h2>
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
-# Level II: Widget Composition
+# Act II: Widget Composition
 
 Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-fragment-index="0" -->
 
@@ -321,7 +319,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: TypeScript
+# Act II: TypeScript
 
 - Widgets written in TypeScript (Typed JavaScript) <!-- .element: class="fragment" data-fragment-index="1" -->
 - JS of the future, now <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -333,7 +331,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: Views
+# Act II: Views
 
 - Presentation of the Widget <!-- .element: class="fragment" data-fragment-index="1" -->
 - Uses ViewModel APIs to render the UI <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -342,7 +340,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: Widget Class
+# Act II: Widget Class
 
 `esri/widgets/Widget`
 
@@ -351,7 +349,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: Widget Lifecycle
+# Act II: Widget Lifecycle
 
 - <!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
 - <!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
@@ -360,7 +358,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: `render`
+# Act II: `render`
 
 - Defines UI <!-- .element: class="fragment" data-fragment-index="1" -->
 - Reacts to state <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -369,7 +367,7 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 ---
 
-# Level II: Working with Views
+# Act II: Working with Views
 
 API Exploration
 
@@ -378,7 +376,7 @@ API Exploration
 
 ---
 
-# Level II: Recreating a view
+# Act II: Recreating a view
 
 Custom Stranger Things Compass
 
@@ -394,7 +392,7 @@ Recreating a view
 
 ---
 
-# Level II: Views Recap
+# Act II: Views Recap
 
 What have we learned about Widget Views?
 
@@ -405,12 +403,10 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- LEVEL UP A -->
-<h1 class="eight-bit">LEVEL UP!</h1>
+<!-- NEXT ACT  A -->
+<h1>End Act II</h1>
 
-![Level 2](./img/8bit/JSAPI-8bit_Level-2.png)
-
-<h2 class="eight-bit">Ready?</h2>
+![Act 2](./img/8bit/JSAPI-8bit_Level-2.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -418,18 +414,18 @@ What have we learned about Widget Views?
 
 <!-- Presenter: JC -->
 
-<!-- LEVEL UP B -->
-<h1 class="eight-bit">LEVEL III</h1>
+<!-- NEXT ACT  B -->
+<h1>Act III</h1>
 
-![Level 3](./img/8bit/JSAPI-8bit_Level-3.png)
+![Act 3](./img/8bit/JSAPI-8bit_Level-3.png)
 
-<h2 class="eight-bit">Extending a View</h2>
+<h2>Extending a View</h2>
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
-# Level III: Extending
+# Act III: Extending
 
 ---
 
@@ -443,7 +439,7 @@ What have we learned about Widget Views?
 
 ---
 
-# Level III: Extending a View Recap
+# Act III: Extending a View Recap
 
 - Reusable <!-- .element: class="fragment" data-fragment-index="1" -->
   - View/ViewModel <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -455,23 +451,19 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- LEVEL UP A -->
-<h1 class="eight-bit">LEVEL UP!</h1>
+<!-- NEXT ACT A -->
+<h1>End Act III</h1>
 
-![Level 3](./img/8bit/JSAPI-8bit_Level-3.png)
-
-<h2 class="eight-bit">Ready?</h2>
+![Act 3](./img/8bit/JSAPI-8bit_Level-3.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
 
-<!-- LEVEL UP B -->
-<h1 class="eight-bit">LEVEL IV</h1>
+<!-- NEXT ACT B -->
+<h1>The End?</h1>
 
-![Level 4](./img/8bit/JSAPI-8bit_Level-4-ani.gif)
-
-<h2 class="eight-bit">Put it all together.</h2>
+![Act 4](./img/8bit/JSAPI-8bit_Level-4-ani.gif)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -502,6 +494,8 @@ What have we learned about Widget Views?
 # Questions?
 
 ##### For example
+
+> 👓 Where's Barbara? 😭
 
 > 🤔 Where can I find the slides/source?
 
