@@ -400,7 +400,17 @@ Custom Stranger Things Compass
 
 # Act II: Compass Interface
 
-// todo
+Our custom widget...
+
+```ts
+interface CustomCompass {
+  view: View; //MapView | SceneView
+  viewModel: CompassViewModel;
+  reset(): void; // CompassViewModel.reset()
+}
+```
+
+Same interface as the default Compass widget
 
 ---
 
