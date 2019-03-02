@@ -197,16 +197,18 @@ Link your stylesheet in your app.
 
 ---
 
-# Goals: Theme Smart
+# Goals
+
+Theme Smart
 
 - Avoid adding additional CSS selectors
 - Instead, use Sass to your advantage
 
-Let's look at how the core theme is structured
-
 ---
 
 # Theme Structure
+
+Let's look at how the core theme is structured
 
 - Color <span>: `color.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
 - Size <span>: `sizes.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
@@ -240,12 +242,9 @@ Override the core color variables...
 
 ```scss
 $font-color                       : #3a5fe5;
-$background-color                 : #1e0707
 $interactive-font-color           : #ff1515;
+$background-color                 : #1e0707
 $button-color                     : #ff1515;
-
-$interactive-font-color--inverse  : #1e0707;
-$background-color--inverse        : #3a5fe5;
 ```
 
 ...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -260,7 +259,7 @@ $background-color--inverse        : #3a5fe5;
 
 ```scss
 $interactive-font-color--hover: offset-foreground-color($interactive-font-color, 25%) !default;
-// etc.
+// ...etc
 ```
 
 [API Styling Guide](http://localhost:3000/latest/guide/styling/index.html)
@@ -273,7 +272,7 @@ Stranger Things Theme
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
 
-**DISCLAIMER**: `Constrast may not be great`
+**DISCLAIMER**: `Constrast may suck`
 
 ### ¯\\\_(ツ)\_/¯
 
@@ -283,7 +282,7 @@ Stranger Things Theme
 
 **Custom Theme**
 
-[Demo Steps](../demos/custom-theme/STEPS.md) | [Preview](http://localhost/git/jsapi-styles/preview/)
+[Preview](http://localhost/git/jsapi-styles/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
 
 ---
 
