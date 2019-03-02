@@ -477,6 +477,16 @@ What have we learned about Widget Views?
 
 ---
 
+## Recommended Sessions
+
+- [Intro to TypeScript](https://devsummit2019.schedule.esri.com/schedule/996246169) Wed 1:30pm
+- [JavaScript for Geographers](https://devsummit2019.schedule.esri.com/schedule/237520120) Wed 2:30 pm
+- [Using TypeScript with ArcGIS API for JavaScript](https://devsummit2019.schedule.esri.com/schedule/1194566856) Wed 2:30 pm
+- [Accessible Web Mapping Apps](https://devsummit2019.schedule.esri.com/schedule/672667633) Thu 9am
+- [Building Your own Widget with ArcGIS API for JavaScript](https://devsummit2019.schedule.esri.com/schedule/822290096) Thu 4pm
+
+---
+
 ## Additional Resources
 
 - [Implementing Accessor](https://developers.arcgis.com/javascript/latest/guide/implementing-accessor/index.html)
