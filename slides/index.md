@@ -15,7 +15,11 @@
 
 ![widget things](img/widget-things.png)
 
+**Warning:** Stranger Things ahead...
+
 ---
+
+# Agenda
 
 - What can be customized
 - Customization approaches with demos
@@ -63,11 +67,13 @@
 
 ## Why Theme? <!-- .element: class="fragment" data-fragment-index="0" -->
 
-- Match branding. <!-- .element: class="fragment" data-fragment-index="1" -->
-- Match the map. <!-- .element: class="fragment" data-fragment-index="2" -->
-- Contrast with the map. <!-- .element: class="fragment" data-fragment-index="3" -->
-- Based on the environment. <!-- .element: class="fragment" data-fragment-index="4" -->
-- User-specific (e.g. bigger buttons) <!-- .element: class="fragment" data-fragment-index="5" -->
+- Match branding.
+- Match the map.
+- Contrast with the map.
+- Based on the environment.
+- User-specific (e.g. bigger buttons)
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -87,7 +93,7 @@ Using a theme requires only a slight update to the CSS path.
 
 **Theme Switcher**
 
-[Out-of-the-box themes](../demos/out-of-the-box-themes/) | [API Styling Guide](http://localhost:3000/latest/guide/styling/index.html)
+[Out-of-the-box themes](../demos/out-of-the-box-themes/)
 
 ---
 
@@ -112,18 +118,22 @@ We use
 
 ### is a powerful scripting language for compiling CSS.
 
-- It's modular. <!-- .element: class="fragment" data-fragment-index="1" -->
-- It's DRY. <!-- .element: class="fragment" data-fragment-index="2" -->
-- It makes theming easy. <!-- .element: class="fragment" data-fragment-index="3" -->
+- It's modular.
+- It's DRY.
+- It makes theming easy.
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
 # Theming Steps
 
-1.  Get our theme utility. <!-- .element: class="fragment" data-fragment-index="1" -->
-1.  Use the utility. <!-- .element: class="fragment" data-fragment-index="2" -->
-1.  Customize your theme. <!-- .element: class="fragment" data-fragment-index="3" -->
-1.  Host your CSS file. <!-- .element: class="fragment" data-fragment-index="4" -->
+1.  Get our theme utility.
+1.  Use the utility.
+1.  Customize your theme.
+1.  Host your CSS file.
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -134,7 +144,7 @@ We use
 1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>.
 1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>.
 
-You won't need the base stylesheet<!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -146,8 +156,6 @@ Clone the repo.<br/>
 ```
 git clone https://github.com/jcfranco/jsapi-styles.git
 ```
-
-<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -189,12 +197,12 @@ Link your stylesheet in your app.
 
 ---
 
-# Theme Smart
+# Goals: Theme Smart
 
 - Avoid adding additional CSS selectors
 - Instead, use Sass to your advantage
 
-Let's look at how the core theme is structured<!-- .element: class="fragment" data-fragment-index="1" -->
+Let's look at how the core theme is structured
 
 ---
 
@@ -252,8 +260,6 @@ $background-color--inverse        : #3a5fe5;
 
 ```scss
 $interactive-font-color--hover: offset-foreground-color($interactive-font-color, 25%) !default;
-$background-color--hover: offset-background-color($background-color, 6%) !default;
-$border-color--hover: offset-foreground-color($interactive-font-color, 50%) !default;
 // etc.
 ```
 
@@ -279,12 +285,12 @@ Stranger Things Theme
 
 # ActI: Theming Recap
 
-- Use the utility for easy theming. <!-- .element: class="fragment" data-fragment-index="1" -->
-- Theme structure <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Color <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Size <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Typography <!-- .element: class="fragment" data-fragment-index="2" -->
-- Use the core and override values. <!-- .element: class="fragment" data-fragment-index="3" -->
+- Use the utility for easy theming.
+- Theme structure
+  - Color
+  - Size
+  - Typography
+- Use the core and override values.
 
 ---
 
@@ -310,33 +316,37 @@ Stranger Things Theme
 
 # Act II: Widget Composition
 
-Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-fragment-index="0" -->
+Widgets are composed of Views & ViewModels
 
-- Seperate logic from presentation <!-- .element: class="fragment" data-fragment-index="1" -->
-- Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
-- UI replacement <!-- .element: class="fragment" data-fragment-index="3" -->
-- Framework integration <!-- .element: class="fragment" data-fragment-index="4" -->
+- Seperate logic from presentation
+- Reusable
+- UI replacement
+- Framework integration
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
 # Act II: TypeScript
 
-- Widgets written in TypeScript (Typed JavaScript) <!-- .element: class="fragment" data-fragment-index="1" -->
-- JS of the future, now <!-- .element: class="fragment" data-fragment-index="2" -->
-- IDE support <!-- .element: class="fragment" data-fragment-index="3" -->
-  - Visual Studio <!-- .element: class="fragment" data-fragment-index="3" -->
-  - WebStorm <!-- .element: class="fragment" data-fragment-index="3" -->
-  - Sublime <!-- .element: class="fragment" data-fragment-index="3" -->
-  - and more! <!-- .element: class="fragment" data-fragment-index="3" -->
+- Widgets written in TypeScript (Typed JavaScript)
+- JS of the future, now <!-- .element: class="fragment" data-fragment-index="1" -->
+- IDE support <!-- .element: class="fragment" data-fragment-index="2" -->
+  - Visual Studio
+  - WebStorm
+  - Sublime
+  - and more!
 
 ---
 
 # Act II: Views
 
-- Presentation of the Widget <!-- .element: class="fragment" data-fragment-index="1" -->
-- Uses ViewModel APIs to render the UI <!-- .element: class="fragment" data-fragment-index="2" -->
-- View-specific logic resides here <!-- .element: class="fragment" data-fragment-index="3" -->
-- Extends <!-- .element: class="fragment" data-fragment-index="5" --> `esri/widgets/Widget`
+- Presentation of the Widget
+- Uses ViewModel APIs to render the UI
+- View-specific logic resides here
+- Extends `esri/widgets/Widget`
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -344,8 +354,10 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 `esri/widgets/Widget`
 
-- Provides lifecycle <!-- .element: class="fragment" data-fragment-index="1" -->
-- API consistency <!-- .element: class="fragment" data-fragment-index="2" -->
+- Provides lifecycle
+- API consistency
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -360,10 +372,12 @@ Widgets are composed of Views & ViewModels <!-- .element: class="fragment" data-
 
 # Act II: `render`
 
-- Defines UI <!-- .element: class="fragment" data-fragment-index="1" -->
-- Reacts to state <!-- .element: class="fragment" data-fragment-index="2" -->
-- Uses JSX <!-- .element: class="fragment" data-fragment-index="3" -->
-- VDOM <!-- .element: class="fragment" data-fragment-index="4" -->
+- Defines UI
+- Reacts to state
+- Uses JSX
+- VDOM
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -384,6 +398,12 @@ Custom Stranger Things Compass
 
 ---
 
+# Act II: Compass Interface
+
+// todo
+
+---
+
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
 Recreating a view
@@ -396,10 +416,12 @@ Recreating a view
 
 What have we learned about Widget Views?
 
-- Face of the widget <!-- .element: class="fragment" data-fragment-index="1" -->
-- Present ViewModel logic <!-- .element: class="fragment" data-fragment-index="2" -->
-- ViewModel separation allows framework integration or custom views <!-- .element: class="fragment" data-fragment-index="3" -->
-- Downloadable on API docs <!-- .element: class="fragment" data-fragment-index="4" -->
+- Face of the widget
+- Present ViewModel logic
+- ViewModel separation allows framework integration or custom views
+- Downloadable on API docs
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
