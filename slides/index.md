@@ -273,6 +273,10 @@ Stranger Things Theme
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
 
+**DISCLAIMER**: `Constrast may be bad`
+
+### ¯\\\_(ツ)\_/¯
+
 ---
 
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
