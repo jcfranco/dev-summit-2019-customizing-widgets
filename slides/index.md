@@ -400,7 +400,7 @@ Custom Stranger Things Compass
 
 # Act II: Compass Interface
 
-Our custom widget...
+CustomCompass widget: Same interface as the default Compass widget
 
 ```ts
 interface CustomCompass {
@@ -409,8 +409,6 @@ interface CustomCompass {
   reset(): void; // CompassViewModel.reset()
 }
 ```
-
-Same interface as the default Compass widget
 
 ---
 
