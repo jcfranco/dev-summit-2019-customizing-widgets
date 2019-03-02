@@ -2,7 +2,7 @@
 
 Steps to create a custom compass widget!
 
-## 1. Explore the file structure
+## Explore the file structure
 
 - `/custom-compass-start/`
   - `/app/`: Folder for the widget and assets
@@ -14,47 +14,17 @@ Steps to create a custom compass widget!
     - [`main.ts`](app/main.ts): File to load and configure the widget as well as the application
   - [`index.html`](index.html): Root application page
 
-## 2. Preview the index page
+## Preview the index page
 
 Open the [index page](http://localhost/git/dev-summit-2019-customizing-widgets/demos/custom-compass-start/) in your web browser.
 
-## 3. Download the Compass View
+## Download the Compass View
 
 Copy the `Compass.tsx` view code and paste it into the `CustomCompass.tsx` file.
 
 [Compass API Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html) | [Compass View Code](https://github.com/Esri/arcgis-js-api/blob/4master/widgets/Compass.tsx)
 
-## 4. Widget View Cleanup
-
-We'll need to remove large JSDoc comments and interfaces we won't need in order to simplify the demo.
-
-### Remove JSDoc
-
-Remove JSDoc on top of file and on properties/methods
-
-### Remove Axes interface
-
-```ts
-import { Axes } from "esri/widgets/interfaces";
-```
-
-### Remove support interfaces
-
-```ts
-import { GoToOverride, VNode } from "esri/widgets/support/interfaces";
-```
-
-### Remove goToOverride
-
-Our widget won't need an override property.
-
-```ts
-//----------------------------------
-//  goToOverride
-//----------------------------------
-
-@aliasOf("viewModel.goToOverride") goToOverride: GoToOverride = null;
-```
+In order to simplify the demo, the file we have is already cleaned up to remove documentation comments and things we don't need.
 
 ## COMPILE: Compile widget view
 
@@ -64,7 +34,7 @@ This is the default Compass widget the API provides.
 
 Now we can start customizing the widget.
 
-## 5. Get rid of properties we won't need
+## Get rid of properties we won't need
 
 Remove the iconClass and label properties
 
@@ -100,7 +70,7 @@ Remove the iconClass and label properties
 @property() label: string = i18n.widgetLabel;
 ```
 
-## 6. Remove i18n file reference
+## Remove i18n file reference
 
 Remove the import of the i18n file. We won't use these text strings for our widget.
 
@@ -109,7 +79,7 @@ Remove the import of the i18n file. We won't use these text strings for our widg
 import * as i18n from "dojo/i18n!esri/widgets/Compass/nls/Compass";
 ```
 
-## 7. Update render method
+## Update render method
 
 ```tsx
 render(): any {
@@ -122,34 +92,11 @@ render(): any {
 }
 ```
 
-## 8. Remove unused private methods
+## COMPILE: `Hello World`
 
-```ts
-//--------------------------------------------------------------------------
-//
-//  Private Methods
-//
-//--------------------------------------------------------------------------
+Lets see the `Hello World` widget
 
-@accessibleHandler()
-private _reset(): void {
-  this.viewModel.reset();
-}
-
-private _toRotationTransform(orientation: any): HashMap<string> {
-  return {
-    transform: `rotateZ(${orientation.z}deg)`
-  };
-}
-```
-
-## 9. Remove `accessibleHandler` import
-
-```ts
-import { renderable, tsx } from "esri/widgets/support/widget";
-```
-
-## 10. Update our render() method
+## Update our render() method
 
 Now we're ready to build our widget out. Lets start by adding a button to our widget.
 
@@ -157,7 +104,7 @@ Now we're ready to build our widget out. Lets start by adding a button to our wi
 render(): any {
   return (
     <button bind={this} onclick={this.reset} aria-label="Reset" title="Reset">
-      My Compass
+      <span style="color:white; font-size:32px">My Compass</span>
     </button>
   );
 }
@@ -167,7 +114,7 @@ render(): any {
 
 Compile and see if the new button is showing up.
 
-## 11. Change button to house an compass needle image
+## Change button to house an compass needle image
 
 ```tsx
 render() {
@@ -185,7 +132,7 @@ render() {
 
 Compile and see if the needle image is showing up.
 
-## 12. Lets add classes to style the widget better
+## Lets add classes to style the widget better
 
 Modify CSS class map object with our custom classes.
 
@@ -197,7 +144,7 @@ const CSS = {
 };
 ```
 
-Add variables for the state of the `CompassViewModel` to see if the widget is currently `disabled`.
+Add variables for the state of the `CompassViewModel` to see if the widget is currently `disabled`. Add them to the top of the `render()` method.
 
 ```ts
 const { state } = this.viewModel;
@@ -223,7 +170,7 @@ return (
 
 ## COMPILE: View the disabled state and styling
 
-## 13. Add transform styles
+## Add transform styles
 
 Now lets rotate the compass needle when the view is rotated. This logic is already given to use from the `CompassViewModel`
 
@@ -256,6 +203,6 @@ const compassImage = (
 
 ## COMPILE: Verify the needle rotates with the view
 
-## fin
+## COMPLETE!
 
-You did it!
+Lets head back to the slides to recap.
