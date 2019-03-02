@@ -186,6 +186,14 @@ $button-width: 42px !default;
 $button-height: 42px !default;
 ```
 
-## fin
+## Open a widget base file and modify
 
-Our theme is complete!
+Open `/jsapi-styles/sass/base/widgets/_Popup.scss`
+
+Modify the file by removing everything and reload the preview page.
+
+Notice how all the styling layout is gone but theme is still there.
+
+## Complete
+
+Lets go back to slides to review Theming.
