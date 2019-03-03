@@ -47,7 +47,7 @@
 
 ---
 
-![continue](./img/8bit/8-BIT-continue-1366.png)
+![continue](./img/8bit/8-BIT-continue.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -55,7 +55,7 @@
 
 <h1>Act I</h1>
 
-![Act 1](./img/8bit/JSAPI-8bit_Level-1.png)
+![Act 1](./img/8bit/JSAPI-8bit_Act-Start.png)
 
 <h2>Theming</h2>
 
@@ -300,7 +300,7 @@ Stranger Things Theme
 <!-- NEXT ACT  A -->
 <h1>End Act I</h1>
 
-![Act 1](./img/8bit/JSAPI-8bit_Level-1.png)
+![Act 1](./img/8bit/JSAPI-8bit_Act-End.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -309,7 +309,7 @@ Stranger Things Theme
 <!-- NEXT ACT  B -->
 <h1>Act II</h1>
 
-![Act 2](./img/8bit/JSAPI-8bit_Level-2.png)
+![Act 2](./img/8bit/JSAPI-8bit_Act-Start.png)
 
 <h2>Views</h2>
 
@@ -439,7 +439,7 @@ What have we learned about Widget Views?
 <!-- NEXT ACT  A -->
 <h1>End Act II</h1>
 
-![Act 2](./img/8bit/JSAPI-8bit_Level-2.png)
+![Act 2](./img/8bit/JSAPI-8bit_Act-End.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -450,7 +450,7 @@ What have we learned about Widget Views?
 <!-- NEXT ACT  B -->
 <h1>Act III</h1>
 
-![Act 3](./img/8bit/JSAPI-8bit_Level-3.png)
+![Act 3](./img/8bit/JSAPI-8bit_Act-Start.png)
 
 <h2>Extending a View</h2>
 
@@ -487,7 +487,7 @@ What have we learned about Widget Views?
 <!-- NEXT ACT A -->
 <h1>End Act III</h1>
 
-![Act 3](./img/8bit/JSAPI-8bit_Level-3.png)
+![Act 3](./img/8bit/JSAPI-8bit_Act-End.png)
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
@@ -496,7 +496,7 @@ What have we learned about Widget Views?
 <!-- NEXT ACT B -->
 <h1>The End?</h1>
 
-![Act 4](./img/8bit/JSAPI-8bit_Level-4-ani.gif)
+<img class="floating" src="./img/8bit/JSAPI-8bit_End.png" height="400" style="margin-left:10px; margin-right: 10px;"/>
 
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 

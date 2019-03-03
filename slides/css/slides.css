@@ -1,0 +1,12 @@
+.floating {
+  animation: floaty 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floaty {
+  from{
+    transform: translate(0, -10px);
+  }
+  to {
+    transform: translate(0, 10px);
+  }
+}
