@@ -1,3 +1,7 @@
+.reveal h1 {
+  font-size: 2em;
+}
+
 .floating {
   animation: floaty 1s ease-in-out infinite alternate-reverse;
 }
