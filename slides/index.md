@@ -7,8 +7,6 @@
 
 ### JC Franco – [@arfncode](https://twitter.com/arfncode)
 
-![hi](https://media.giphy.com/media/l1J9QMBuKJr9Axeik/200w_d.gif)
-
 ---
 
 # Agenda
@@ -272,9 +270,7 @@ Stranger Things Theme
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
 
-**DISCLAIMER**: `Constrast may suck`
-
-### ¯\\\_(ツ)\_/¯
+**DISCLAIMER**: `theme has low contrast`
 
 ---
 
@@ -321,7 +317,7 @@ Stranger Things Theme
 
 Widgets are composed of Views & ViewModels
 
-- Seperate logic from presentation
+- Separate logic from presentation
 - Reusable
 - UI replacement
 - Framework integration
