@@ -35,7 +35,6 @@
   -webkit-text-fill-color: ghostwhite;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(7, 19, 94, 0.95);
-  backface-visibility: hidden;
 }
 
 .custom-basemap-gallery__dice-face:before {
@@ -59,7 +58,7 @@
 /* dice faces */
 
 .custom-basemap-gallery__dice-face--1 {
-  transform: rotateY(142deg) rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateY(144deg) rotateX(25deg) rotateZ(180deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--1:before {
@@ -67,7 +66,7 @@
 }
 
 .custom-basemap-gallery__dice-face--2 {
-  transform: rotateY(72deg) rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateY(72deg) rotateX(25deg) rotateZ(180deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--2:before {
@@ -75,7 +74,7 @@
 }
 
 .custom-basemap-gallery__dice-face--3 {
-  transform: rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateX(25deg) rotateZ(180deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--3:before {
@@ -83,7 +82,7 @@
 }
 
 .custom-basemap-gallery__dice-face--4 {
-  transform: rotateY(288deg) rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateY(288deg) rotateX(25deg) rotateZ(180deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--4:before {
@@ -91,7 +90,7 @@
 }
 
 .custom-basemap-gallery__dice-face--5 {
-  transform: rotateY(216deg) rotateX(23.313deg) rotateZ(180deg) translate3d(0, 0, 36px);
+  transform: rotateY(216deg) rotateX(25deg) rotateZ(180deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--5:before {
@@ -100,7 +99,7 @@
 
 .custom-basemap-gallery__dice-face--6 {
   display: unset;
-  transform: rotateX(90deg) translate3d(0, 0, 36px);
+  transform: rotateX(90deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--6:before {
@@ -108,7 +107,7 @@
 }
 
 .custom-basemap-gallery__dice-face--7 {
-  transform: rotateY(106deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
+  transform: rotateY(-108deg) rotateX(-25deg) rotateZ(0deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--7:before {
@@ -116,7 +115,7 @@
 }
 
 .custom-basemap-gallery__dice-face--8 {
-  transform: rotateY(36deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
+  transform: rotateY(180deg) rotateX(-25deg) rotateZ(0deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--8:before {
@@ -124,14 +123,14 @@
 }
 
 .custom-basemap-gallery__dice-face--9 {
-  transform: rotateY(-36deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
+  transform: rotateY(36deg) rotateX(-25deg) rotateZ(0deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--9:before {
   content: "9";
 }
 .custom-basemap-gallery__dice-face--10 {
-  transform: rotateY(252deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
+  transform: rotateY(-252deg) rotateX(-25deg) rotateZ(0deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--10:before {
@@ -139,7 +138,7 @@
 }
 
 .custom-basemap-gallery__dice-face--11 {
-  transform: rotateY(180deg) rotateX(-23.313deg) rotateZ(0deg) translate3d(0, 0, 36px);
+  transform: rotateY(-36deg) rotateX(-25deg) rotateZ(0deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--11:before {
@@ -148,7 +147,7 @@
 
 .custom-basemap-gallery__dice-face--12 {
   display: unset;
-  transform: rotateX(-90deg) translate3d(0, 0, 36px);
+  transform: rotateX(-90deg) translate3d(0, 0, 34px);
 }
 
 .custom-basemap-gallery__dice-face--12:before {
