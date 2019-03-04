@@ -266,7 +266,7 @@ $interactive-font-color--hover: offset-foreground-color($interactive-font-color,
 
 ---
 
-# ActI: Lets make a theme
+# Act I: Lets make a theme
 
 Stranger Things Theme
 
@@ -286,7 +286,7 @@ Stranger Things Theme
 
 ---
 
-# ActI: Theming Recap
+# Act I: Theming Recap
 
 - Use the utility for easy theming.
 - Theme structure
