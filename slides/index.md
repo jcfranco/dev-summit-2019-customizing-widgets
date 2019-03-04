@@ -87,7 +87,7 @@ Using a theme requires only a slight update to the CSS path.
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
 
 **Theme Switcher**
 
@@ -256,11 +256,11 @@ $button-color                     : #ff1515;
 <img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/>
 
 ```scss
-$interactive-font-color--hover: offset-foreground-color($interactive-font-color, 25%) !default;
+$button-color--hover: darken($button-color, 10%) !default;
 // ...etc
 ```
 
-[API Styling Guide](http://localhost:3000/latest/guide/styling/index.html)
+[API Styling Guide](https://jscore.esri.com/javascript/latest/guide/styling/)
 
 ---
 
@@ -274,11 +274,11 @@ Stranger Things Theme
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
 
 **Custom Theme**
 
-[Preview](http://localhost/git/jsapi-styles/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
+[Preview](../../jsapi-styles/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
 
 ---
 
@@ -411,7 +411,7 @@ interface CustomCompass {
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
 
 Recreating a view
 
@@ -456,16 +456,16 @@ What have we learned about Widget Views?
 
 # Act III: Extending
 
-- Why?                          <!-- .element: class="fragment" data-fragment-index="1" -->
-  - Reusable                    <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Same ecosystem              <!-- .element: class="fragment" data-fragment-index="3" -->
-- How?                          <!-- .element: class="fragment" data-fragment-index="4" -->
+- Why? <!-- .element: class="fragment" data-fragment-index="1" -->
+  - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
+  - Same ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
+- How? <!-- .element: class="fragment" data-fragment-index="4" -->
   - <!-- .element: class="fragment" data-fragment-index="5" --> Leveraging `esri/widgets/Widget`
-  - API Widgets                  <!-- .element: class="fragment" data-fragment-index="6" -->
+  - API Widgets <!-- .element: class="fragment" data-fragment-index="6" -->
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
 
 **CustomCompass (Revisited)**
 
@@ -473,14 +473,13 @@ What have we learned about Widget Views?
 
 ---
 
-
 **CustomBasemapGallery**
 
 [Demo](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custombasemapgallery-end/)
 |
 [Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery/STEPS.md)
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
 
 ---
 
