@@ -456,15 +456,31 @@ What have we learned about Widget Views?
 
 # Act III: Extending
 
+- Why?                          <!-- .element: class="fragment" data-fragment-index="1" -->
+  - Reusable                    <!-- .element: class="fragment" data-fragment-index="2" -->
+  - Same ecosystem              <!-- .element: class="fragment" data-fragment-index="3" -->
+- How?                          <!-- .element: class="fragment" data-fragment-index="4" -->
+  - <!-- .element: class="fragment" data-fragment-index="5" --> Leveraging `esri/widgets/Widget`
+  - API Widgets                  <!-- .element: class="fragment" data-fragment-index="6" -->
+
 ---
 
-# Demo: Extending
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
+
+**CustomCompass (Revisited)**
+
+[Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/customcompass-extended/STEPS.md)
+
+---
+
+
+**CustomBasemapGallery**
 
 [Demo](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custombasemapgallery-end/)
 |
-[Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery-start/STEPS.md)
+[Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery/STEPS.md)
 
-<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-2.png" data-background-size="cover" style="padding-left: 80px;"  -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 25%;" -->
 
 ---
 
