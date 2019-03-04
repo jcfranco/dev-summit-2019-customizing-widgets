@@ -87,7 +87,7 @@ Using a theme requires only a slight update to the CSS path.
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 
 **Theme Switcher**
 
@@ -274,7 +274,7 @@ Stranger Things Theme
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 
 **Custom Theme**
 
@@ -411,7 +411,7 @@ interface CustomCompass {
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 
 Recreating a view
 
@@ -465,7 +465,7 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 
 **CustomCompass (Revisited)**
 
@@ -479,7 +479,7 @@ What have we learned about Widget Views?
 |
 [Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery/STEPS.md)
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 40%;" -->
+<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 
 ---
 
