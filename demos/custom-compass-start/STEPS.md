@@ -22,7 +22,7 @@ Open the [index page](http://localhost/git/dev-summit-2019-customizing-widgets/d
 
 Copy the `Compass.tsx` view code and paste it into the `CustomCompass.tsx` file.
 
-[Compass API Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html) | [Compass View Code](https://github.com/Esri/arcgis-js-api/blob/4master/widgets/Compass.tsx)
+[Compass API Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html) | [Compass View Code](https://github.com/Esri/arcgis-js-api/blob/4master/widgets/Compass.tsx) | [Compass VM](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass-CompassViewModel.html)
 
 In order to simplify the demo, the file we have is already cleaned up to remove documentation comments and things we don't need.
 

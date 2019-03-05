@@ -261,7 +261,7 @@ $button-color--hover: darken($button-color, 10%) !default;
 // ...etc
 ```
 
-[API Styling Guide](https://jscore.esri.com/javascript/latest/guide/styling/)
+[API Styling Guide](https://developers.arcgis.com/javascript/latest/guide/styling/index.html#sassy-widgets)
 
 ---
 
@@ -318,7 +318,7 @@ Stranger Things Theme
 
 Widgets are composed of Views & ViewModels
 
-- Separate logic from presentation
+- Logic is separate from presentation
 - Reusable
 - UI replacement
 - Framework integration
@@ -416,7 +416,7 @@ interface CustomCompass {
 
 Recreating a view
 
-[Demo Start](../demos/custom-compass-start/) | [Demo Steps](../demos/custom-compass-start/STEPS.md)
+[Demo Start](../demos/custom-compass-start/) | [Demo Steps](../demos/custom-compass-start/STEPS.md) | [Compass Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
 
 ---
 
