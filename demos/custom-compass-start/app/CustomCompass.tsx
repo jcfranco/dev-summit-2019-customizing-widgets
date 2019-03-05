@@ -127,6 +127,8 @@ class Compass extends declared(Widget) {
       </button>
     );
   }
+
+  // end class
 }
 
 export = Compass;
