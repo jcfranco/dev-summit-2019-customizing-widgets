@@ -30,7 +30,10 @@ Copy the following to `/jsapi-styles/preview/index.html`.
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <title>Custom theme preview</title>
     <style>
       html,
@@ -54,7 +57,16 @@ Copy the following to `/jsapi-styles/preview/index.html`.
         "esri/widgets/Expand",
         "esri/widgets/Home",
         "esri/widgets/LayerList"
-      ], function(MapView, WebMap, Search, Legend, Compass, Expand, Home, LayerList) {
+      ], function(
+        MapView,
+        WebMap,
+        Search,
+        Legend,
+        Compass,
+        Expand,
+        Home,
+        LayerList
+      ) {
         var webmap = new WebMap({
           portalItem: {
             id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
@@ -143,6 +155,7 @@ $font-color: #3a5fe5;
 // $background-color: #1e0707;
 // $button-color: #ff1515;
 
+// Keep this import last
 @import "../base/core";
 ```
 
@@ -169,21 +182,21 @@ $font-title: "BenguiatITCW01-BoldCn";
 }
 
 // Font
-$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family: $font-title, "Avenir Next W00", "Helvetica Neue", Helvetica, Arial, sans-serif;
 ```
 
 ## Change Font sizing
 
 ```scss
-$line-height: 1.3em !default;
-$base-font-size: 18px !default;
+$line-height: 1.3em;
+$base-font-size: 18px;
 ```
 
 ## Modify Button Sizes
 
 ```scss
-$button-width: 42px !default;
-$button-height: 42px !default;
+$button-width: 42px;
+$button-height: 42px;
 ```
 
 ## Open a widget base file and modify

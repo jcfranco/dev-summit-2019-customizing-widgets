@@ -68,7 +68,6 @@
 - Match branding.
 - Match the map.
 - Contrast with the map.
-- Based on the environment.
 - User-specific (e.g. bigger buttons)
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -219,7 +218,7 @@ Let's look at how the core theme is structured
 ### Default
 
 ```scss
-// Inside base/_colorVariables.scss
+// Inside base/_color_.scss
 $background-color: #fff !default;
 ```
 
@@ -254,6 +253,8 @@ $button-color                     : #ff1515;
 # Magic
 
 <img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/>
+
+Using `$button-color` we "automagically" set the hover color.
 
 ```scss
 $button-color--hover: darken($button-color, 10%) !default;
