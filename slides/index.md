@@ -1,5 +1,5 @@
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;" -->
-<!-- Presenter: JC Franco -->
+<!-- Presenter: Franco -->
 
 # ArcGIS API for JavaScript: Customizing Widgets
 
@@ -50,6 +50,8 @@
 <!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
 
 ---
+
+<!-- Presenter: Matt -->
 
 <h1>Act I</h1>
 
@@ -442,7 +444,7 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- Presenter: JC -->
+<!-- Presenter: Franco -->
 
 <!-- NEXT ACT  B -->
 <h1>Act III</h1>
