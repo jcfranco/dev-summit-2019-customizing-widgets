@@ -30,10 +30,10 @@
 - Theming <!-- .element: class="fragment" data-fragment-index="1" -->
   - Changing styles: colors, sizing, font, etc.
 - Altering presentation of a widget <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Customizing view
   - New view
+  - Recreating a view
 - Extending <!-- .element: class="fragment" data-fragment-index="3" -->
-  - Adding additional functionality
+  - Overriding, adding functionality
 
 ---
 
@@ -63,7 +63,7 @@
 
 ---
 
-# ActI: Theming
+# Act I: Theming
 
 ## Why Theme? <!-- .element: class="fragment" data-fragment-index="0" -->
 
@@ -519,8 +519,8 @@ What have we learned about Widget Views?
 # Conclusion
 
 - Authored a theme <!-- .element: class="fragment" data-fragment-index="1" -->
-- Extended a view <!-- .element: class="fragment" data-fragment-index="2" -->
 - Recreated a view <!-- .element: class="fragment" data-fragment-index="3" -->
+- Extended a view <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
