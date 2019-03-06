@@ -55,7 +55,7 @@
 
 <h1>Act I</h1>
 
-![Act 1](./img/8bit/JSAPI-8bit_Act-Start.png)
+![Act 1](./img/8bit/JSAPI-8BIT_Act-Start.png)
 
 <h2>Theming</h2>
 
