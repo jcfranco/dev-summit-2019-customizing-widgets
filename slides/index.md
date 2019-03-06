@@ -519,8 +519,8 @@ What have we learned about Widget Views?
 # Conclusion
 
 - Authored a theme <!-- .element: class="fragment" data-fragment-index="1" -->
-- Recreated a view <!-- .element: class="fragment" data-fragment-index="3" -->
-- Extended a view <!-- .element: class="fragment" data-fragment-index="2" -->
+- Recreated a view <!-- .element: class="fragment" data-fragment-index="2" -->
+- Extended a view <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
