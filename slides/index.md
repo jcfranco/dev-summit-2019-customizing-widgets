@@ -472,15 +472,15 @@ What have we learned about Widget Views?
 
 **CustomCompass (Revisited)**
 
-[Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/customcompass-extended/STEPS.md)
+[Steps](../demos/custom-compass-extended-start/STEPS.md)
 
 ---
 
 **CustomBasemapGallery**
 
-[Demo](https://jcfranco.github.io/dev-summit-2018-customizing-widgets/demos/custombasemapgallery-end/)
+[Demo](../demos/custom-basemap-gallery-complete/)
 |
-[Steps](https://github.com/jcfranco/dev-summit-2018-customizing-widgets/blob/master/demos/custombasemapgallery/STEPS.md)
+[Steps](../demos/custom-basemap-gallery-start/STEPS.md)
 
 <!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
 

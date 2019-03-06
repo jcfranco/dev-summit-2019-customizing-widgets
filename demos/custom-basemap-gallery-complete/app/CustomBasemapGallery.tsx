@@ -77,8 +77,8 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
 
   roll() {
     const {
-      viewModel: { items }
-    } = this;
+            viewModel: { items }
+          } = this;
 
     // get random basemap
     const randomItemIndex = Math.floor(Math.random() * items.length);
@@ -115,35 +115,35 @@ class CustomBasemapGallery extends declared(BasemapGallery) {
 
   protected renderDice() {
     const {
-      viewModel: { items }
-    } = this;
+            viewModel: { items }
+          } = this;
     const item = items.find((item) => item.basemap === this.activeBasemap);
     const index = items.indexOf(item);
 
     const faceClass =
-      index === 0
-        ? CSS.dice1Selected
-        : index === 1
-        ? CSS.dice2Selected
-        : index === 2
-        ? CSS.dice3Selected
-        : index === 3
-        ? CSS.dice4Selected
-        : index === 4
-        ? CSS.dice5Selected
-        : index === 5
-        ? CSS.dice6Selected
-        : index === 6
-        ? CSS.dice7Selected
-        : index === 7
-        ? CSS.dice8Selected
-        : index === 8
-        ? CSS.dice9Selected
-        : index === 9
-        ? CSS.dice10Selected
-        : index === 10
-        ? CSS.dice11Selected
-        : CSS.dice12Selected;
+            index === 0
+            ? CSS.dice1Selected
+            : index === 1
+              ? CSS.dice2Selected
+              : index === 2
+                ? CSS.dice3Selected
+                : index === 3
+                  ? CSS.dice4Selected
+                  : index === 4
+                    ? CSS.dice5Selected
+                    : index === 5
+                      ? CSS.dice6Selected
+                      : index === 6
+                        ? CSS.dice7Selected
+                        : index === 7
+                          ? CSS.dice8Selected
+                          : index === 8
+                            ? CSS.dice9Selected
+                            : index === 9
+                              ? CSS.dice10Selected
+                              : index === 10
+                                ? CSS.dice11Selected
+                                : CSS.dice12Selected;
 
     const rollingClass = this._rolling ? CSS.diceRolling : null;
 

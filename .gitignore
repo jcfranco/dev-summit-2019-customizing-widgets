@@ -3,3 +3,6 @@ node_modules
 .idea
 *.js.map
 *.js
+demos/custom-basemap-gallery-start/**/*.js*
+demos/custom-compass-extended-start/**/*.js*
+demos/custom-compass-start/**/*.js*
