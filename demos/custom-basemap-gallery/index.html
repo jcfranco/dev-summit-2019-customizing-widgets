@@ -32,48 +32,12 @@
     </script>
 
     <script src="https://js.arcgis.com/4.11"></script>
-    <script>
-      var map, view, widget;
-
-      require(["esri/WebMap", "esri/views/MapView", "demo/CustomBasemapGallery", "dojo/domReady!"], function(
-        WebMap,
-        MapView,
-        CustomBasemapGallery
-      ) {
-        //----------------
-        //  map setup
-        //----------------
-
-        map = new WebMap({
-          portalItem: {
-            id: "e7a5e0c315cf4ed4a017c8eaabb247c7"
-          }
-        });
-
-        view = new MapView({
-          container: "view",
-          map: map,
-          center: [-116.538433, 33.824775],
-          zoom: 13,
-          ui: {
-            components: ["attribution"]
-          }
-        });
-
-        //----------------
-        //  widget setup
-        //----------------
-
-        widget = new CustomBasemapGallery({
-          view: view
-        });
-
-        view.ui.add(widget, "top-left");
-      });
-    </script>
   </head>
 
   <body>
     <div id="view"></div>
+    <script>
+      require(["demo"]);
+    </script>
   </body>
 </html>
